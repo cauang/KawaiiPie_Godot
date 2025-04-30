@@ -18,16 +18,18 @@ animations = [{
 collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 159)
+scale = Vector2(0.67963, 0.67963)
 sprite_frames = SubResource("SpriteFrames_1qcta")
 animation = &"pie"
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-2, 347.5)
+position = Vector2(-6, 399)
 shape = ExtResource("2_xm27m")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(3, 346)
+position = Vector2(-3, 397.375)
 shape = ExtResource("2_xm27m")

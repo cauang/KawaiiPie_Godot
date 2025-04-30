@@ -59,6 +59,7 @@ collision_mask = 2
 script = ExtResource("1_ildhv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_tibwc")
 animation = &"girl1PIE"
 autoplay = "girl1"
@@ -66,11 +67,11 @@ autoplay = "girl1"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, 53.5)
+position = Vector2(-1, 124)
 shape = ExtResource("9_qsqf0")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 55)
+position = Vector2(1, 122.75)
 shape = ExtResource("9_qsqf0")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

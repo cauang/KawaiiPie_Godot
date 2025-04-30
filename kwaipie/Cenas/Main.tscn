@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://devfdee6wy2b2"]
 
 [ext_resource type="Script" uid="uid://6gklcollpp3x" path="res://Cenas/main.gd" id="1_n6gaj"]
-[ext_resource type="Texture2D" uid="uid://pmjj514cynqg" path="res://Assets/meiga1.png" id="2_gxdmd"]
-[ext_resource type="Texture2D" uid="uid://88a267vhe2ip" path="res://Assets/meigo1.png" id="3_uwx1x"]
-[ext_resource type="Texture2D" uid="uid://bc2woahbrfk4p" path="res://Assets/PiePIXEL.png" id="4_ctm5k"]
+[ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="3_n6gaj"]
+[ext_resource type="PackedScene" uid="uid://dl6wruw3gvs0o" path="res://Cenas/player_2.tscn" id="4_gxdmd"]
+[ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="4_n6gaj"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_n6gaj")
@@ -15,39 +15,20 @@ offset_right = 1282.0
 offset_bottom = 721.0
 color = Color(0.950569, 0.814311, 0.923254, 1)
 
-[node name="Player1" type="Sprite2D" parent="."]
-position = Vector2(299, 365)
-scale = Vector2(0.666667, 0.666667)
-texture = ExtResource("2_gxdmd")
-
-[node name="P1ScoreLabel" type="Label" parent="Player1"]
-offset_left = -91.5
-offset_top = -438.0
-offset_right = -14.5
-offset_bottom = -408.0
-
-[node name="Player2" type="Sprite2D" parent="."]
-position = Vector2(1027, 361)
-scale = Vector2(0.664815, 0.664815)
-texture = ExtResource("3_uwx1x")
-
-[node name="P2ScoreLabel" type="Label" parent="Player2"]
-offset_left = -70.6964
-offset_top = -376.045
-offset_right = 15.3036
-offset_bottom = -335.045
-
 [node name="WinnerLabel" type="Label" parent="."]
 modulate = Color(1, 0, 1, 1)
-offset_left = 646.0
-offset_top = 85.0
-offset_right = 703.0
-offset_bottom = 108.0
+offset_left = 623.0
+offset_top = 87.0
+offset_right = 680.0
+offset_bottom = 110.0
 text = "Winner"
 horizontal_alignment = 1
 
-[node name="Pie" type="Sprite2D" parent="."]
-position = Vector2(647, 636)
-scale = Vector2(0.665625, 0.677695)
-texture = ExtResource("4_ctm5k")
-offset = Vector2(-6, -379)
+[node name="Player1" parent="." instance=ExtResource("3_n6gaj")]
+position = Vector2(280, 464)
+
+[node name="Player2" parent="." instance=ExtResource("4_gxdmd")]
+position = Vector2(1026, 320)
+
+[node name="Pie" parent="." instance=ExtResource("4_n6gaj")]
+position = Vector2(653, 222)
