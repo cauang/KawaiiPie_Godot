@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://dn60fo8xd0svo"]
+
+[ext_resource type="Script" uid="uid://bgfc0605d47ul" path="res://Cenas/player_4.gd" id="1_jifa4"]
+[ext_resource type="Texture2D" uid="uid://cu6nlvcei63yr" path="res://Assets/Sem Fundo/Girl2.1.png" id="2_2sjpe"]
+[ext_resource type="Texture2D" uid="uid://bo8gblmdq2tfy" path="res://Assets/Sem Fundo/Girl2.2.png" id="3_cgaqb"]
+[ext_resource type="Texture2D" uid="uid://bs8qfjyh4mfe0" path="res://Assets/Sem Fundo/Girl2.3.png" id="4_jn6ew"]
+[ext_resource type="Texture2D" uid="uid://cbx07vgam450p" path="res://Assets/Sem Fundo/Girl2.4.png" id="5_nbv3o"]
+[ext_resource type="Texture2D" uid="uid://dryxyk8g0ywp7" path="res://Assets/Sem Fundo/Girl2GANHOU.png" id="6_fyhsh"]
+[ext_resource type="Texture2D" uid="uid://4dk75i85xohl" path="res://Assets/Sem Fundo/Girl2PERDEU.png" id="7_gx6iw"]
+[ext_resource type="Texture2D" uid="uid://cuci2v8044s1r" path="res://Assets/Sem Fundo/Girl2PIE.png" id="8_12mo3"]
+[ext_resource type="Shape2D" uid="uid://c6fl5qmd1lji2" path="res://Resources/CollisionShapes/girl2.tres" id="9_cl1vo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjvkc"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("2_2sjpe")
+}, {
+"duration": 10.0,
+"texture": ExtResource("3_cgaqb")
+}, {
+"duration": 10.0,
+"texture": ExtResource("4_jn6ew")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_nbv3o")
+}],
+"loop": true,
+"name": &"girl2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fyhsh")
+}],
+"loop": true,
+"name": &"girl2GANHOU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gx6iw")
+}],
+"loop": true,
+"name": &"girl2PERDEU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_12mo3")
+}],
+"loop": true,
+"name": &"girl2PIE",
+"speed": 5.0
+}]
+
+[node name="Player4" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_jifa4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kjvkc")
+animation = &"girl2PIE"
+autoplay = "girl2"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 51)
+shape = ExtResource("9_cl1vo")
+
+[node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 51)
+shape = ExtResource("9_cl1vo")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

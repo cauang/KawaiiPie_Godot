@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://chwhiutqayc82"]
+
+[ext_resource type="Script" uid="uid://dhvrlypg5ut5l" path="res://Cenas/player_6.gd" id="1_sr7v8"]
+[ext_resource type="Texture2D" uid="uid://bh062sgw0bols" path="res://Assets/Sem Fundo/Girl3.1.png" id="2_ddie3"]
+[ext_resource type="Texture2D" uid="uid://4x1kcw2rgjy2" path="res://Assets/Sem Fundo/Girl3.2.png" id="3_eemyg"]
+[ext_resource type="Texture2D" uid="uid://d4ccqqsn4aprw" path="res://Assets/Sem Fundo/Girl3.3.png" id="4_owu6v"]
+[ext_resource type="Texture2D" uid="uid://bjn8dx8o0731k" path="res://Assets/Sem Fundo/Girl3.4.png" id="5_omg74"]
+[ext_resource type="Texture2D" uid="uid://d57k3pm55fe6" path="res://Assets/Sem Fundo/Girl3GANHOU.png" id="6_t0kop"]
+[ext_resource type="Texture2D" uid="uid://c6qjyaumyevdf" path="res://Assets/Sem Fundo/Girl3PERDEU.png" id="7_hbi45"]
+[ext_resource type="Texture2D" uid="uid://dvfhldw5gqvc3" path="res://Assets/Sem Fundo/Girl3PIE.png" id="8_q3cl8"]
+[ext_resource type="Shape2D" uid="uid://d3dqftlkmyq83" path="res://Resources/CollisionShapes/girl3.tres" id="9_7botw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xaqj"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("2_ddie3")
+}, {
+"duration": 10.0,
+"texture": ExtResource("3_eemyg")
+}, {
+"duration": 10.0,
+"texture": ExtResource("4_owu6v")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_omg74")
+}],
+"loop": true,
+"name": &"girl3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_t0kop")
+}],
+"loop": true,
+"name": &"girl3GANHOU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hbi45")
+}],
+"loop": true,
+"name": &"girl3PERDEU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_q3cl8")
+}],
+"loop": true,
+"name": &"girl3PIE",
+"speed": 5.0
+}]
+
+[node name="Player6" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_sr7v8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1xaqj")
+animation = &"girl3PIE"
+autoplay = "girl3"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 45)
+shape = ExtResource("9_7botw")
+
+[node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 45)
+shape = ExtResource("9_7botw")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

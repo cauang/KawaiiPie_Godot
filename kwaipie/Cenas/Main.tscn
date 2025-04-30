@@ -38,12 +38,11 @@ offset_right = 15.3036
 offset_bottom = -335.045
 
 [node name="WinnerLabel" type="Label" parent="."]
-visible = false
 modulate = Color(1, 0, 1, 1)
-offset_left = 637.0
-offset_top = 49.0
-offset_right = 677.0
-offset_bottom = 72.0
+offset_left = 646.0
+offset_top = 85.0
+offset_right = 703.0
+offset_bottom = 108.0
 text = "Winner"
 horizontal_alignment = 1
 

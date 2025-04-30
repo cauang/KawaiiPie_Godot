@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://byar7fftflpro"]
+
+[ext_resource type="Script" uid="uid://ml8a1hd57syc" path="res://Cenas/player_3.gd" id="1_umavm"]
+[ext_resource type="Texture2D" uid="uid://dh1ld2eewg7sn" path="res://Assets/Sem Fundo/Boy2.1.png" id="2_supqt"]
+[ext_resource type="Texture2D" uid="uid://cvouutxsdasfh" path="res://Assets/Sem Fundo/Boy2.2.png" id="3_2t80n"]
+[ext_resource type="Texture2D" uid="uid://cdefyc80rpkdx" path="res://Assets/Sem Fundo/Boy2.3.png" id="4_5xbfv"]
+[ext_resource type="Texture2D" uid="uid://bcauq12nkjxuu" path="res://Assets/Sem Fundo/Boy2.4.png" id="5_hb5bp"]
+[ext_resource type="Texture2D" uid="uid://1ckyhlwo1akk" path="res://Assets/Sem Fundo/Boy2GANHOU.png" id="6_yb0t2"]
+[ext_resource type="Texture2D" uid="uid://d181l0odsxac7" path="res://Assets/Sem Fundo/Boy2PERDEU.png" id="7_k01df"]
+[ext_resource type="Texture2D" uid="uid://dn2fyjqcut45k" path="res://Assets/Sem Fundo/Boy2PIE.png" id="8_ctnyf"]
+[ext_resource type="Shape2D" uid="uid://dnw0w4puk3bmj" path="res://Resources/CollisionShapes/boy2.tres" id="9_f7hsc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtnbq"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("2_supqt")
+}, {
+"duration": 10.0,
+"texture": ExtResource("3_2t80n")
+}, {
+"duration": 10.0,
+"texture": ExtResource("4_5xbfv")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_hb5bp")
+}],
+"loop": true,
+"name": &"boy2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_yb0t2")
+}],
+"loop": true,
+"name": &"boy2GANHOU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k01df")
+}],
+"loop": true,
+"name": &"boy2PERDEU",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ctnyf")
+}],
+"loop": true,
+"name": &"boy2PIE",
+"speed": 5.0
+}]
+
+[node name="Player3" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_umavm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rtnbq")
+animation = &"boy2PIE"
+autoplay = "boy2"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 50.75)
+shape = ExtResource("9_f7hsc")
+
+[node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 50)
+shape = ExtResource("9_f7hsc")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
