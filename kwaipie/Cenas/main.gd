@@ -4,6 +4,7 @@ var pie_movement = 15  # pixels a mover por clique
 var pie_start_x = 0
 var pie_limit = 375
 
+
 var game_over = false
 var cooldown_time = 0.02  # tempo de delay entre cliques em segundos
 var cooldown_timer = 0.0
