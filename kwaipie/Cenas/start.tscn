@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdlloqy08xh1a"]
 
-[ext_resource type="Script" path="res://Cenas/start.gd" id="1_e5x2v"]
+[ext_resource type="Script" uid="uid://b833x6s6xckh3" path="res://Cenas/start.gd" id="1_e5x2v"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="2_mtvmb"]
 
 [node name="Start" type="CanvasLayer"]
@@ -42,9 +42,9 @@ offset_right = 87.0
 offset_bottom = 148.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.686275, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_mtvmb")
 theme_override_font_sizes/font_size = 30
 text = "Sair"

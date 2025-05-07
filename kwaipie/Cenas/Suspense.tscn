@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddw1dua6s71qh"]
+[gd_scene load_steps=5 format=3 uid="uid://ddw1dua6s71qh"]
 
 [ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="1_0p6fa"]
+[ext_resource type="Script" uid="uid://mwb3wl1e4b4y" path="res://Cenas/suspense.gd" id="1_df0lq"]
 [ext_resource type="PackedScene" uid="uid://dl6wruw3gvs0o" path="res://Cenas/player_2.tscn" id="2_57f2o"]
 [ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="3_xtj0f"]
 
 [node name="Suspense" type="Node"]
+script = ExtResource("1_df0lq")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_left = 2.0
