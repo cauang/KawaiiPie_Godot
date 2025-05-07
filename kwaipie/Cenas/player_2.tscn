@@ -74,4 +74,10 @@ shape = ExtResource("9_qsqf0")
 position = Vector2(1, 122.75)
 shape = ExtResource("9_qsqf0")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 160.0
+offset_top = -185.0
+offset_right = 246.0
+offset_bottom = -100.0
+
 [connection signal="ready" from="." to="." method="_on_ready"]
