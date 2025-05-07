@@ -65,9 +65,9 @@ sprite_frames = SubResource("SpriteFrames_hdt88")
 animation = &"boy1PIE"
 autoplay = "boy1"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="clickArea" type="Area2D" parent="."]
 
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="clickArea"]
 position = Vector2(2, -28)
 shape = ExtResource("8_fk6p3")
 
@@ -75,10 +75,12 @@ shape = ExtResource("8_fk6p3")
 position = Vector2(-4, -28)
 shape = ExtResource("8_fk6p3")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 139.0
-offset_top = -275.0
-offset_right = 212.0
-offset_bottom = -203.0
+[node name="PlayerIndicator" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 144.0
+offset_top = -291.0
+offset_right = 217.0
+offset_bottom = -219.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]

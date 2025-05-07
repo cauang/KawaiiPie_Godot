@@ -63,9 +63,9 @@ sprite_frames = SubResource("SpriteFrames_kjvkc")
 animation = &"girl2PIE"
 autoplay = "girl2"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="clickArea" type="Area2D" parent="."]
 
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="clickArea"]
 position = Vector2(0.5, 51)
 shape = ExtResource("9_cl1vo")
 
@@ -73,7 +73,7 @@ shape = ExtResource("9_cl1vo")
 position = Vector2(1, 51)
 shape = ExtResource("9_cl1vo")
 
-[node name="Label" type="Label" parent="."]
+[node name="PlayerIndicator" type="Label" parent="."]
 offset_left = 88.0
 offset_top = -139.0
 offset_right = 161.0

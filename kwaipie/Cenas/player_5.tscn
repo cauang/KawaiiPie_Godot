@@ -63,9 +63,9 @@ sprite_frames = SubResource("SpriteFrames_y1ul3")
 animation = &"boy3"
 autoplay = "boy3"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="clickArea" type="Area2D" parent="."]
 
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="clickArea"]
 position = Vector2(0.5, 53.5)
 shape = ExtResource("9_6xycx")
 
@@ -73,7 +73,7 @@ shape = ExtResource("9_6xycx")
 position = Vector2(1, 53)
 shape = ExtResource("9_6xycx")
 
-[node name="Label" type="Label" parent="."]
+[node name="PlayerIndicator" type="Label" parent="."]
 offset_left = 113.0
 offset_top = -135.0
 offset_right = 186.0
