@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjhporm7df82g"]
+
+[ext_resource type="Script" path="res://Cenas/start.gd" id="1_24vh7"]
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="2_pmyos"]
+[ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="3_oeygo"]
+[ext_resource type="PackedScene" uid="uid://dl6wruw3gvs0o" path="res://Cenas/player_2.tscn" id="4_ngpuj"]
+[ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="5_v1lf6"]
+
+[node name="gameOver" type="CanvasLayer"]
+script = ExtResource("1_24vh7")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1282.0
+offset_bottom = 721.0
+size_flags_vertical = 4
+color = Color(0.950569, 0.814311, 0.923254, 1)
+
+[node name="recomeçar" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -28.0
+offset_right = 161.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_pmyos")
+theme_override_font_sizes/font_size = 44
+text = "Jogar de Novo"
+
+[node name="cancelar" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = 105.0
+offset_right = 91.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.686275, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_pmyos")
+theme_override_font_sizes/font_size = 30
+text = "Sair"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Player1" parent="." instance=ExtResource("3_oeygo")]
+position = Vector2(245, 476)
+
+[node name="Player2" parent="." instance=ExtResource("4_ngpuj")]
+position = Vector2(1071, 344)
+
+[node name="Pie" parent="." instance=ExtResource("5_v1lf6")]
+position = Vector2(661, 235)
+
+[connection signal="pressed" from="recomeçar" to="." method="_on_começar_pressed"]
+[connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]

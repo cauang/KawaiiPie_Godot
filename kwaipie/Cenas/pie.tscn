@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://3i8yd5lmfnor"]
+[gd_scene load_steps=5 format=3 uid="uid://3i8yd5lmfnor"]
 
 [ext_resource type="Texture2D" uid="uid://bu7780xqvetle" path="res://Assets/Sem Fundo/PiePIXEL.png" id="1_su6bs"]
+[ext_resource type="Texture2D" uid="uid://bc2woahbrfk4p" path="res://Assets/PiePIXEL.png" id="2_r23bo"]
 [ext_resource type="Shape2D" uid="uid://c756gv4k3kvo" path="res://Resources/CollisionShapes/pie.tres" id="2_xm27m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qcta"]
@@ -12,6 +13,14 @@ animations = [{
 "loop": true,
 "name": &"pie",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("2_r23bo")
+}],
+"loop": true,
+"name": &"piemove",
+"speed": 10.0
 }]
 
 [node name="Pie" type="CharacterBody2D"]
@@ -21,15 +30,16 @@ collision_mask = 2
 position = Vector2(1, 159)
 scale = Vector2(0.67963, 0.67963)
 sprite_frames = SubResource("SpriteFrames_1qcta")
-animation = &"pie"
+animation = &"piemove"
+autoplay = "pie"
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-6, 399)
+position = Vector2(1, 396)
 shape = ExtResource("2_xm27m")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(-3, 397.375)
+position = Vector2(1, 395)
 shape = ExtResource("2_xm27m")

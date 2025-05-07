@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddw1dua6s71qh"]
+
+[ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="1_0p6fa"]
+[ext_resource type="PackedScene" uid="uid://dl6wruw3gvs0o" path="res://Cenas/player_2.tscn" id="2_57f2o"]
+[ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="3_xtj0f"]
+
+[node name="Suspense" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1282.0
+offset_bottom = 721.0
+size_flags_vertical = 4
+color = Color(0.950569, 0.814311, 0.923254, 1)
+
+[node name="WinnerLabel" type="Label" parent="."]
+modulate = Color(1, 0, 1, 1)
+offset_left = 625.0
+offset_top = 88.0
+offset_right = 682.0
+offset_bottom = 111.0
+text = "Winner"
+horizontal_alignment = 1
+
+[node name="Player1" parent="." instance=ExtResource("1_0p6fa")]
+position = Vector2(245, 476)
+
+[node name="Player2" parent="." instance=ExtResource("2_57f2o")]
+position = Vector2(1071, 344)
+
+[node name="Pie" parent="." instance=ExtResource("3_xtj0f")]
+position = Vector2(661, 235)
