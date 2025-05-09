@@ -67,16 +67,18 @@ offset_bottom = -67.0
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(0.5, 45)
+position = Vector2(-9.5, -65.5)
 shape = ExtResource("9_7botw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -135)
+scale = Vector2(1.584, 1.584)
 sprite_frames = SubResource("SpriteFrames_1xaqj")
-animation = &"girl3PIE"
+animation = &"girl3"
 autoplay = "girl3"
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 45)
+position = Vector2(-11, -67)
 shape = ExtResource("9_7botw")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

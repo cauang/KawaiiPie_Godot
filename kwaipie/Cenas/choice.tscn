@@ -34,11 +34,11 @@ position = Vector2(186, 183)
 scale = Vector2(0.3, 0.3)
 
 [node name="Player2" parent="Players" instance=ExtResource("3_x0ugj")]
-position = Vector2(398, 137)
+position = Vector2(398, 183)
 scale = Vector2(0.3, 0.3)
 
 [node name="Player3" parent="Players" instance=ExtResource("4_mvjdu")]
-position = Vector2(628, 138)
+position = Vector2(871, 173)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player4" parent="Players" instance=ExtResource("5_p5gvq")]
@@ -50,7 +50,7 @@ position = Vector2(398, 404)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player6" parent="Players" instance=ExtResource("7_8ggwx")]
-position = Vector2(628, 404)
+position = Vector2(634, 414)
 scale = Vector2(0.505, 0.505)
 
 [node name="ConfirmButton" type="Button" parent="."]
@@ -92,10 +92,10 @@ metadata/scene_path = "res://Cenas/player_2.tscn"
 
 [node name="bplayer3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 599.0
-offset_top = 270.0
-offset_right = 661.0
-offset_bottom = 301.0
+offset_left = 829.0
+offset_top = 332.0
+offset_right = 891.0
+offset_bottom = 363.0
 pivot_offset = Vector2(31, 16)
 text = "gabriel"
 metadata/scene_path = "res://Cenas/player_3.tscn"

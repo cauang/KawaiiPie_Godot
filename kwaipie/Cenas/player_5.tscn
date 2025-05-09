@@ -59,23 +59,8 @@ animations = [{
 collision_mask = 2
 script = ExtResource("1_hr4fl")
 
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 53.5)
-shape = ExtResource("9_6xycx")
-
-[node name="ClickArea" type="Area2D" parent="."]
-
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(0, 52.5)
-shape = ExtResource("3_w3rvu")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_y1ul3")
-animation = &"boy3"
-autoplay = "boy3"
-
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 53)
+position = Vector2(3.5, -25.5)
 shape = ExtResource("9_6xycx")
 
 [node name="PlayerIndicator" type="Label" parent="."]
@@ -83,5 +68,18 @@ offset_left = 113.0
 offset_top = -135.0
 offset_right = 186.0
 offset_bottom = -63.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -107)
+scale = Vector2(1.584, 1.584)
+sprite_frames = SubResource("SpriteFrames_y1ul3")
+animation = &"boy3"
+autoplay = "boy3"
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(3, -23.5)
+shape = ExtResource("3_w3rvu")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

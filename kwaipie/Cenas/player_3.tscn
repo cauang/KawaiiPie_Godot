@@ -59,18 +59,20 @@ collision_mask = 2
 script = ExtResource("1_umavm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -135)
+scale = Vector2(1.584, 1.584)
 sprite_frames = SubResource("SpriteFrames_rtnbq")
-animation = &"boy2PIE"
+animation = &"boy2"
 autoplay = "boy2"
 
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(2, 50.75)
+position = Vector2(-6.5, -55.5)
 shape = ExtResource("9_f7hsc")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 50)
+position = Vector2(-4, -54)
 shape = ExtResource("9_f7hsc")
 
 [node name="PlayerIndicator" type="Label" parent="."]

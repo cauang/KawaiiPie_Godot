@@ -59,18 +59,20 @@ collision_mask = 2
 script = ExtResource("1_jifa4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -135)
+scale = Vector2(1.584, 1.584)
 sprite_frames = SubResource("SpriteFrames_kjvkc")
-animation = &"girl2PIE"
+animation = &"girl2"
 autoplay = "girl2"
 
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(0.5, 51)
+position = Vector2(-4, -51.5)
 shape = ExtResource("9_cl1vo")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 51)
+position = Vector2(-4, -54)
 shape = ExtResource("9_cl1vo")
 
 [node name="PlayerIndicator" type="Label" parent="."]
