@@ -33,9 +33,9 @@ func spawn_players():
 		if player_scene:
 			var player_instance = player_scene.instantiate()  # Cria a instância do jogador
 			if i == 0:
-				player_instance.position = spawn_point_1.position  # Coloca o jogador 1 no ponto de spawn 1
+				player_instance.position = spawn_point_1.position  # Coloca o 1P no ponto de spawn 1
 			else:
-				player_instance.position = spawn_point_2.position  # Coloca o jogador 2 no ponto de spawn 2
+				player_instance.position = spawn_point_2.position  # Coloca o 2P jogador 2 no ponto de spawn 2
 
 			# Adiciona a instância do jogador à cena principal
 			add_child(player_instance)
