@@ -64,9 +64,9 @@ sprite_frames = SubResource("SpriteFrames_tibwc")
 animation = &"girl1PIE"
 autoplay = "girl1"
 
-[node name="clickArea" type="Area2D" parent="."]
+[node name="ClickArea" type="Area2D" parent="."]
 
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="clickArea"]
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
 position = Vector2(-1, 85.875)
 shape = ExtResource("9_qsqf0")
 
@@ -81,3 +81,4 @@ offset_right = 246.0
 offset_bottom = -100.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
