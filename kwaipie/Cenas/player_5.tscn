@@ -66,7 +66,7 @@ shape = ExtResource("9_6xycx")
 [node name="ClickArea" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
-position = Vector2(0.5, 51)
+position = Vector2(0, 52.5)
 shape = ExtResource("3_w3rvu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
