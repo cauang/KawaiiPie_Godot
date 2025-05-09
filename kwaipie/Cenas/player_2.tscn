@@ -67,11 +67,11 @@ autoplay = "girl1"
 [node name="clickArea" type="Area2D" parent="."]
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="clickArea"]
-position = Vector2(-1, 124)
+position = Vector2(-1, 85.875)
 shape = ExtResource("9_qsqf0")
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 122.75)
+position = Vector2(1.5, 85)
 shape = ExtResource("9_qsqf0")
 
 [node name="PlayerIndicator" type="Label" parent="."]

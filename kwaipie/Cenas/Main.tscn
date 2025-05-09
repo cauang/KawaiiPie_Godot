@@ -1,8 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://devfdee6wy2b2"]
+[gd_scene load_steps=3 format=3 uid="uid://devfdee6wy2b2"]
 
 [ext_resource type="Script" uid="uid://6gklcollpp3x" path="res://Cenas/main.gd" id="1_n6gaj"]
-[ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="3_n6gaj"]
-[ext_resource type="PackedScene" uid="uid://dl6wruw3gvs0o" path="res://Cenas/player_2.tscn" id="4_gxdmd"]
 [ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="4_n6gaj"]
 
 [node name="Main" type="Node"]
@@ -16,6 +14,7 @@ offset_bottom = 721.0
 color = Color(0.950569, 0.814311, 0.923254, 1)
 
 [node name="WinnerLabel" type="Label" parent="."]
+visible = false
 modulate = Color(1, 0, 1, 1)
 offset_left = 623.0
 offset_top = 87.0
@@ -24,11 +23,11 @@ offset_bottom = 110.0
 text = "Winner"
 horizontal_alignment = 1
 
-[node name="Player1" parent="." instance=ExtResource("3_n6gaj")]
-position = Vector2(280, 464)
-
-[node name="Player2" parent="." instance=ExtResource("4_gxdmd")]
-position = Vector2(1026, 320)
-
 [node name="Pie" parent="." instance=ExtResource("4_n6gaj")]
-position = Vector2(653, 222)
+position = Vector2(684, 234)
+
+[node name="spawnPointPlayer1" type="Node2D" parent="."]
+position = Vector2(274, 499)
+
+[node name="spawnPointPPlayer2" type="Node2D" parent="."]
+position = Vector2(1080, 499)

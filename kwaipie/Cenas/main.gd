@@ -17,7 +17,6 @@ func _ready():
 func _process(delta):
 	if game_over:
 		return
-	
 	# Atualiza o timer de cooldown
 	if cooldown_timer > 0:
 		cooldown_timer -= delta
@@ -44,6 +43,8 @@ func _process(delta):
 	
 	# Verifica vitória por contato com as paredes
 	check_wall_contact_winner()
+	if(game_over == true):
+		get_tree().change_scene_to_file("res://Cenas/game_over.tscn")
 
 func check_wall_contact_winner():
 	if pie.position.x >= pie_start_x + pie_limit:

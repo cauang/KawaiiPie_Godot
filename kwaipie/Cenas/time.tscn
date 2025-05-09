@@ -1,3 +1,67 @@
-[gd_scene format=3 uid="uid://dcqx171xnbkf"]
+[gd_scene load_steps=3 format=3 uid="uid://dcqx171xnbkf"]
+
+[ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="1_4ks0r"]
+[ext_resource type="Script" uid="uid://cqi86qcuguib7" path="res://Cenas/time.gd" id="1_aaxx0"]
 
 [node name="time" type="Node"]
+script = ExtResource("1_aaxx0")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1282.0
+offset_bottom = 721.0
+color = Color(0.950569, 0.814311, 0.923254, 1)
+
+[node name="DEZ" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = 132.0
+offset_right = 171.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4ks0r")
+theme_override_font_sizes/font_size = 44
+text = "30 S
+"
+
+[node name="VINTE" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -67.0
+offset_right = 171.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4ks0r")
+theme_override_font_sizes/font_size = 44
+text = "20 S"
+
+[node name="TRINTA" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -266.0
+offset_right = 174.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4ks0r")
+theme_override_font_sizes/font_size = 44
+text = "10 S"
+
+[connection signal="pressed" from="DEZ" to="." method="_on_dez_pressed"]
+[connection signal="pressed" from="VINTE" to="." method="_on_vinte_pressed"]
+[connection signal="pressed" from="TRINTA" to="." method="_on_trinta_pressed"]
