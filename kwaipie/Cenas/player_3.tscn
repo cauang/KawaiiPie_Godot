@@ -62,7 +62,7 @@ script = ExtResource("1_umavm")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_rtnbq")
-animation = &"pie"
+animation = &"perdeu"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]

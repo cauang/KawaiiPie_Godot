@@ -1,82 +1,125 @@
 extends Node
 
+## Configurações do jogo
 var pie_movement = 15
 var pie_start_x = 0
 var pie_limit = 375
+var danger_threshold = 0.7  # Limite para animação "perdeu"
 
+## Estado do jogo
 var game_over = false
 var cooldown_time = 0.02
 var cooldown_timer = 0.0
 
-@onready var pie = get_node("Pie")
+## Referências aos nós
+@onready var pie = $Pie
 @onready var spawn_point_1 = $SpawnPoint1
 @onready var spawn_point_2 = $SpawnPoint2
+@onready var winner_label = $WinnerLabel
+
+## Referências aos jogadores
+var player1: Node2D = null
+var player2: Node2D = null
 
 func _ready():
+	# Configuração inicial
 	pie_start_x = pie.position.x
-
-	# Verifique se a variável 'chosen_players' está correta
+	winner_label.visible = false
+	
+	# Verificação dos jogadores selecionados
 	if Global.chosen_players.size() < 2:
-		print("Erro: jogadores não selecionados corretamente.")
+		push_error("Erro: Número insuficiente de jogadores selecionados")
 		return
 	
-	# Tente instanciar os jogadores a partir dos caminhos armazenados em 'Global.chosen_players'
+	# Spawn dos jogadores
 	spawn_players()
 
 func spawn_players():
-	# Tente instanciar cada jogador usando os caminhos fornecidos em 'Global.chosen_players'
+	# Carrega e instancia os jogadores
 	for i in range(2):
-		var scene_path = Global.chosen_players[i]
-		var player_scene = load(scene_path)  # Carrega a cena do jogador
+		var player_path = Global.chosen_players[i]
+		var player_scene = load(player_path)
 		
-		# Verifique se a cena foi carregada com sucesso
-		if player_scene:
-			var player_instance = player_scene.instantiate()  # Cria a instância do jogador
-			if i == 0:
-				player_instance.position = spawn_point_1.position  # Coloca o 1P no ponto de spawn 1
-			else:
-				player_instance.position = spawn_point_2.position  # Coloca o 2P jogador 2 no ponto de spawn 2
-
-			# Adiciona a instância do jogador à cena principal
-			add_child(player_instance)
+		if not player_scene:
+			push_error("Erro ao carregar cena do jogador: ", player_path)
+			continue
+		
+		var player_instance = player_scene.instantiate()
+		
+		# Configura cada jogador
+		if i == 0:
+			player_instance.position = spawn_point_1.position
+			player_instance.is_player1 = true
+			player1 = player_instance
 		else:
-			print("Erro ao carregar cena para jogador:", scene_path)
+			player_instance.position = spawn_point_2.position
+			player_instance.is_player1 = false
+			player2 = player_instance
+		
+		add_child(player_instance)
 
 func _process(delta):
 	if game_over:
 		return
-
+	
+	# Cooldown do movimento
 	if cooldown_timer > 0:
 		cooldown_timer -= delta
 		return
 	
+	# Controles dos jogadores
 	var moved = false
 	
 	if Input.is_action_just_pressed("move_p1"):
 		pie.position.x += pie_movement
 		moved = true
+	
 	if Input.is_action_just_pressed("move_p2"):
 		pie.position.x -= pie_movement
 		moved = true
 	
+	# Atualizações do jogo
 	if moved:
 		cooldown_timer = cooldown_time
 	
-	var min_x = pie_start_x - pie_limit
-	var max_x = pie_start_x + pie_limit
-	pie.position.x = clamp(pie.position.x, min_x, max_x)
+	# Limita o movimento da torta
+	pie.position.x = clamp(
+		pie.position.x,
+		pie_start_x - pie_limit,
+		pie_start_x + pie_limit
+	)
 	
-	check_wall_contact_winner()
-	if game_over:
-		get_tree().change_scene_to_file("res://Cenas/game_over.tscn")
+	# Atualiza animações e verifica vitória
+	update_player_animations()
+	check_winner()
 
-func check_wall_contact_winner():
+func update_player_animations():
+	if not player1 or not player2:
+		return
+	
+	# Calcula a posição normalizada da torta (0 a 1)
+	var normalized_position = (pie.position.x - (pie_start_x - pie_limit)) / (2 * pie_limit)
+	
+	# Atualiza animação do Player 1
+	if player1.has_method("set_animation_intensity"):
+		player1.set_animation_intensity(normalized_position)
+	
+	# Atualiza animação do Player 2 (intensidade invertida)
+	if player2.has_method("set_animation_intensity"):
+		player2.set_animation_intensity(normalized_position)
+
+func check_winner():
+	# Verifica se a torta atingiu os limites
 	if pie.position.x >= pie_start_x + pie_limit:
-		show_winner(1)
+		end_game(1)  # Player 1 venceu
 	elif pie.position.x <= pie_start_x - pie_limit:
-		show_winner(2)
+		end_game(2)  # Player 2 venceu
 
-func show_winner(player):
+func end_game(winner):
 	game_over = true
-	$WinnerLabel.text = "Jogador " + str(player) + " venceu!"
-	$WinnerLabel.visible = true
+	winner_label.text = "Jogador %d venceu!" % winner
+	winner_label.visible = true
+	
+	# Muda para a cena de game over após um breve delay
+	await get_tree().create_timer(2.0).timeout
+	get_tree().change_scene_to_file("res://Cenas/game_over.tscn")
