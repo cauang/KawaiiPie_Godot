@@ -72,7 +72,7 @@ shape = ExtResource("9_7botw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -135)
-scale = Vector2(1.584, 1.584)
+scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_1xaqj")
 animation = &"girl3"
 autoplay = "girl3"

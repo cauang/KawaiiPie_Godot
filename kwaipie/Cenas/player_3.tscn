@@ -60,7 +60,7 @@ script = ExtResource("1_umavm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, -135)
-scale = Vector2(1.584, 1.584)
+scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_rtnbq")
 animation = &"boy2"
 autoplay = "boy2"

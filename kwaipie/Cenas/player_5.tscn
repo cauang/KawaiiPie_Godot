@@ -71,7 +71,7 @@ offset_bottom = -63.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -107)
-scale = Vector2(1.584, 1.584)
+scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_y1ul3")
 animation = &"boy3"
 autoplay = "boy3"
