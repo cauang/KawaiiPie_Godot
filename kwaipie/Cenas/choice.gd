@@ -36,9 +36,8 @@ func _on_button_pressed(button):
 			elif selected_players.size() == 2:
 				button.modulate = Color(1, 0, 0)  # Vermelho
 			print("Jogador adicionado:", player_path)
-
+ 
 	update_button_labels()
-
 # Atualiza os textos nos indicadores dos jogadores
 func update_button_labels():
 	for child in get_children():
