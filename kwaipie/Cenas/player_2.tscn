@@ -13,6 +13,14 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_tibwc"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4aom4")
+}],
+"loop": true,
+"name": &"ganhou",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 10.0,
 "texture": ExtResource("2_255ym")
 }, {
@@ -26,23 +34,15 @@ animations = [{
 "texture": ExtResource("5_wl6oo")
 }],
 "loop": true,
-"name": &"girl1",
+"name": &"idle",
 "speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_4aom4")
-}],
-"loop": true,
-"name": &"girl1GANHOU",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_ro1pu")
 }],
 "loop": true,
-"name": &"girl1PERDEU",
+"name": &"perdeu",
 "speed": 5.0
 }, {
 "frames": [{
@@ -50,7 +50,7 @@ animations = [{
 "texture": ExtResource("8_wria0")
 }],
 "loop": true,
-"name": &"girl1PIE",
+"name": &"pie",
 "speed": 5.0
 }]
 
@@ -62,8 +62,8 @@ script = ExtResource("1_ildhv")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_tibwc")
-animation = &"girl1"
-autoplay = "girl1"
+animation = &"pie"
+autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]
 

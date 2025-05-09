@@ -13,6 +13,14 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_kjvkc"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fyhsh")
+}],
+"loop": true,
+"name": &"ganhou",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 10.0,
 "texture": ExtResource("2_2sjpe")
 }, {
@@ -26,23 +34,15 @@ animations = [{
 "texture": ExtResource("5_nbv3o")
 }],
 "loop": true,
-"name": &"girl2",
+"name": &"idle",
 "speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_fyhsh")
-}],
-"loop": true,
-"name": &"girl2GANHOU",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_gx6iw")
 }],
 "loop": true,
-"name": &"girl2PERDEU",
+"name": &"perdeu",
 "speed": 5.0
 }, {
 "frames": [{
@@ -50,7 +50,7 @@ animations = [{
 "texture": ExtResource("8_12mo3")
 }],
 "loop": true,
-"name": &"girl2PIE",
+"name": &"pie",
 "speed": 5.0
 }]
 
@@ -62,8 +62,8 @@ script = ExtResource("1_jifa4")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_kjvkc")
-animation = &"girl2"
-autoplay = "girl2"
+animation = &"ganhou"
+autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]
 

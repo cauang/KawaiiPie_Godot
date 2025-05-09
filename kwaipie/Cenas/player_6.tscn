@@ -13,6 +13,14 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_1xaqj"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_t0kop")
+}],
+"loop": true,
+"name": &"ganhou",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 10.0,
 "texture": ExtResource("2_ddie3")
 }, {
@@ -26,23 +34,18 @@ animations = [{
 "texture": ExtResource("5_omg74")
 }],
 "loop": true,
-"name": &"girl3",
+"name": &"idle",
 "speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_t0kop")
-}],
-"loop": true,
-"name": &"girl3GANHOU",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("7_hbi45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eemyg")
 }],
 "loop": true,
-"name": &"girl3PERDEU",
+"name": &"perdeu",
 "speed": 5.0
 }, {
 "frames": [{
@@ -50,7 +53,7 @@ animations = [{
 "texture": ExtResource("8_q3cl8")
 }],
 "loop": true,
-"name": &"girl3PIE",
+"name": &"pie",
 "speed": 5.0
 }]
 
@@ -74,8 +77,8 @@ shape = ExtResource("9_7botw")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_1xaqj")
-animation = &"girl3"
-autoplay = "girl3"
+animation = &"perdeu"
+autoplay = "idle"
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-11, -67)

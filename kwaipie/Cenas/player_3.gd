@@ -8,6 +8,6 @@ extends CharacterBody2D
 
 func _ready():
 	if animated_player:
-		animated_player.play("boy2")
+		animated_player.play("idle")
 	else:
 		printerr("AnimatedSprite2D não encontrado")
