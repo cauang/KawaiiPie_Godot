@@ -1,56 +1,58 @@
 extends Control
 
-var selected_players: Array[String] = []  # Caminhos dos jogadores selecionados
-var player_instances: Array[Node] = []  # Instâncias dos personagens
+var selected_players := []  # Caminhos das cenas dos jogadores selecionados
+var selected_buttons := []  # Referência aos botões selecionados
 
-@onready var container: Node = $Players
-@onready var confirm_button: Button = $ConfirmButton
+@onready var confirm_button = $ConfirmButton
 
 func _ready():
-	# Coleta os personagens dentro do contêiner
-	player_instances = container.get_children()
+	# Percorre todos os nós filhos diretos da cena e conecta os botões com nome "bplayer*"
+	for child in get_children():
+		if child is Button and child.name.begins_with("bplayer"):
+			child.connect("pressed", Callable(self, "_on_button_pressed").bind(child))
 
-	# Conecta o sinal de clique de cada jogador à função local
-	for player in player_instances:
-		if player.has_signal("player_clicked"):
-			player.connect("player_clicked", Callable(self, "_on_player_pressed"))
-		else:
-			printerr("O player não tem o sinal 'player_clicked': ", player.name)
+	# Conecta o botão de confirmação
+	confirm_button.connect("pressed", Callable(self, "on_confirm_pressed"))
 
-	# Conecta o botão de confirmação com segurança
-	confirm_button.pressed.connect(Callable(self, "on_confirm_pressed"))
-
-func _on_player_pressed(player_node):
-	var player_path = player_node.player_scene_path
+func _on_button_pressed(button):
+	var player_name = button.name  # Ex: bplayer1
+	var player_path = "res://Cenas/" + player_name.to_lower() + ".tscn"
 
 	if selected_players.has(player_path):
+		# Já está selecionado → desmarca
 		selected_players.erase(player_path)
-		print("Removido:", player_path)
+		selected_buttons.erase(button)
+		button.modulate = Color(1, 1, 1)  # Branco
+		print("Jogador removido:", player_path)
 	else:
+		# Marca até dois jogadores
 		if selected_players.size() < 2:
 			selected_players.append(player_path)
-			print("Adicionado:", player_path)
-		else:
-			print("Máximo de 2 jogadores atingido.")
+			selected_buttons.append(button)
+			if selected_players.size() == 1:
+				button.modulate = Color(0, 0, 1)  # Azul
+			elif selected_players.size() == 2:
+				button.modulate = Color(1, 0, 0)  # Vermelho
+			print("Jogador adicionado:", player_path)
 
-	update_player_indicators()
+	update_button_labels()
 
-func update_player_indicators():
-	for player in player_instances:
-		var label = player.get_node("PlayerIndicator")
-		var path = player.player_scene_path
-
-		if selected_players.size() > 0 and selected_players[0] == path:
-			label.text = "1P"
-		elif selected_players.size() > 1 and selected_players[1] == path:
-			label.text = "2P"
-		else:
-			label.text = ""
+func update_button_labels():
+	for child in get_children():
+		if child is Button and child.name.begins_with("bplayer") and child.has_node("PlayerIndicator"):
+			var label = child.get_node("PlayerIndicator")
+			var path = "res://Cenas/" + child.name.to_lower() + ".tscn"
+			if selected_players.size() > 0 and selected_players[0] == path:
+				label.text = "1P"
+			elif selected_players.size() > 1 and selected_players[1] == path:
+				label.text = "2P"
+			else:
+				label.text = ""
 
 func on_confirm_pressed():
 	if selected_players.size() == 2:
 		Global.chosen_players = selected_players.duplicate()
-		print("Jogadores escolhidos:", selected_players)
+		print("Jogadores selecionados:", selected_players)
 		get_tree().change_scene_to_file("res://Cenas/time.tscn")
 	else:
 		print("Escolha exatamente 2 jogadores.")

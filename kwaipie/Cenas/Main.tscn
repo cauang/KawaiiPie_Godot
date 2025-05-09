@@ -26,8 +26,8 @@ horizontal_alignment = 1
 [node name="Pie" parent="." instance=ExtResource("4_n6gaj")]
 position = Vector2(684, 234)
 
-[node name="spawnPointPlayer1" type="Node2D" parent="."]
-position = Vector2(274, 499)
+[node name="SpawnPoint1" type="Marker2D" parent="."]
+position = Vector2(234, 516)
 
-[node name="spawnPointPPlayer2" type="Node2D" parent="."]
-position = Vector2(1080, 499)
+[node name="SpawnPoint2" type="Marker2D" parent="."]
+position = Vector2(234, 516)

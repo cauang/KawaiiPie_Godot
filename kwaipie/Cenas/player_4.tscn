@@ -80,4 +80,3 @@ offset_right = 161.0
 offset_bottom = -67.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
