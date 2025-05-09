@@ -24,6 +24,7 @@ animations = [{
 }]
 
 [node name="Pie" type="CharacterBody2D"]
+z_index = 1
 collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
