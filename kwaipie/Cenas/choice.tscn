@@ -30,28 +30,27 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player1" parent="Players" instance=ExtResource("2_rfoid")]
-position = Vector2(272, 189)
+position = Vector2(272, 128)
 scale = Vector2(0.5, 0.5)
-player_scene_path = "res://Cenas/player_1.tscn"
 
 [node name="Player2" parent="Players" instance=ExtResource("3_x0ugj")]
-position = Vector2(658, 118)
+position = Vector2(671, 57)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player3" parent="Players" instance=ExtResource("4_mvjdu")]
-position = Vector2(1073, 130)
+position = Vector2(1076, 42)
 scale = Vector2(0.8, 0.8)
 
 [node name="Player4" parent="Players" instance=ExtResource("5_p5gvq")]
-position = Vector2(667, 451)
+position = Vector2(238, 460)
 scale = Vector2(0.8, 0.8)
 
 [node name="Player5" parent="Players" instance=ExtResource("6_ue8tn")]
-position = Vector2(271, 451)
+position = Vector2(622, 466)
 scale = Vector2(0.8, 0.8)
 
 [node name="Player6" parent="Players" instance=ExtResource("7_8ggwx")]
-position = Vector2(1070, 468)
+position = Vector2(1102, 433)
 scale = Vector2(0.8, 0.8)
 
 [node name="ConfirmButton" type="Button" parent="."]
@@ -61,14 +60,68 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 575.0
-offset_top = 630.0
-offset_right = 724.0
-offset_bottom = 692.0
+offset_left = 793.0
+offset_top = 607.0
+offset_right = 905.0
+offset_bottom = 669.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_x0ugj")
 theme_override_font_sizes/font_size = 44
 text = "Go!"
+
+[node name="player1" type="Button" parent="."]
+layout_mode = 2
+offset_left = 238.0
+offset_top = 263.0
+offset_right = 300.0
+offset_bottom = 294.0
+pivot_offset = Vector2(31, 16)
+text = "joao"
+
+[node name="player2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 622.0
+offset_top = 262.0
+offset_right = 694.0
+offset_bottom = 293.0
+pivot_offset = Vector2(36, 16)
+text = "maria"
+
+[node name="player3" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1062.0
+offset_top = 258.0
+offset_right = 1124.0
+offset_bottom = 289.0
+pivot_offset = Vector2(31, 16)
+text = "gabriel"
+
+[node name="player4" type="Button" parent="."]
+layout_mode = 2
+offset_left = 209.0
+offset_top = 663.0
+offset_right = 271.0
+offset_bottom = 694.0
+pivot_offset = Vector2(31, 16)
+text = "lara"
+
+[node name="player5" type="Button" parent="."]
+layout_mode = 2
+offset_left = 594.0
+offset_top = 663.0
+offset_right = 656.0
+offset_bottom = 694.0
+pivot_offset = Vector2(31, 16)
+text = "rafael"
+
+[node name="player6" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1074.0
+offset_top = 649.0
+offset_right = 1136.0
+offset_bottom = 680.0
+pivot_offset = Vector2(31, 16)
+text = "Julia"
 
 [connection signal="pressed" from="ConfirmButton" to="." method="_on_confirm_button_pressed"]
