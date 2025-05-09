@@ -13,6 +13,9 @@ offset_right = 1282.0
 offset_bottom = 721.0
 color = Color(0.950569, 0.814311, 0.923254, 1)
 
+[node name="Pie" parent="." instance=ExtResource("4_n6gaj")]
+position = Vector2(684, 234)
+
 [node name="WinnerLabel" type="Label" parent="."]
 visible = false
 modulate = Color(1, 0, 1, 1)
@@ -22,9 +25,6 @@ offset_right = 680.0
 offset_bottom = 110.0
 text = "Winner"
 horizontal_alignment = 1
-
-[node name="Pie" parent="." instance=ExtResource("4_n6gaj")]
-position = Vector2(684, 234)
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
 position = Vector2(234, 516)
