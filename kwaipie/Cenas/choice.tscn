@@ -30,28 +30,28 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player1" parent="Players" instance=ExtResource("2_rfoid")]
-position = Vector2(186, 183)
-scale = Vector2(0.3, 0.3)
+position = Vector2(183, 163)
+scale = Vector2(0.4, 0.4)
 
 [node name="Player2" parent="Players" instance=ExtResource("3_x0ugj")]
-position = Vector2(398, 183)
-scale = Vector2(0.3, 0.3)
+position = Vector2(670, 164)
+scale = Vector2(0.4, 0.4)
 
 [node name="Player3" parent="Players" instance=ExtResource("4_mvjdu")]
-position = Vector2(871, 173)
-scale = Vector2(0.5, 0.5)
+position = Vector2(1151, 164)
+scale = Vector2(0.4, 0.4)
 
 [node name="Player4" parent="Players" instance=ExtResource("5_p5gvq")]
-position = Vector2(185, 404)
-scale = Vector2(0.505, 0.505)
+position = Vector2(178, 491)
+scale = Vector2(0.4, 0.4)
 
 [node name="Player5" parent="Players" instance=ExtResource("6_ue8tn")]
-position = Vector2(398, 404)
-scale = Vector2(0.5, 0.5)
+position = Vector2(668, 475)
+scale = Vector2(0.4, 0.4)
 
 [node name="Player6" parent="Players" instance=ExtResource("7_8ggwx")]
-position = Vector2(634, 414)
-scale = Vector2(0.505, 0.505)
+position = Vector2(1151, 501)
+scale = Vector2(0.4, 0.4)
 
 [node name="ConfirmButton" type="Button" parent="."]
 layout_mode = 1
@@ -72,61 +72,67 @@ text = "Go!"
 
 [node name="bplayer1" type="Button" parent="."]
 layout_mode = 2
-offset_left = 151.0
-offset_top = 263.0
-offset_right = 213.0
-offset_bottom = 294.0
+offset_left = 149.0
+offset_top = 269.0
+offset_right = 211.0
+offset_bottom = 300.0
 pivot_offset = Vector2(31, 16)
-text = "joao"
+theme_override_fonts/font = ExtResource("8_x0ugj")
+text = "João"
 metadata/scene_path = "res://Cenas/player_1.tscn"
 
 [node name="bplayer2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 363.0
+offset_left = 635.0
 offset_top = 269.0
-offset_right = 435.0
+offset_right = 707.0
 offset_bottom = 300.0
 pivot_offset = Vector2(36, 16)
-text = "maria"
+theme_override_fonts/font = ExtResource("8_x0ugj")
+text = "Maria"
 metadata/scene_path = "res://Cenas/player_2.tscn"
 
 [node name="bplayer3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 829.0
-offset_top = 332.0
-offset_right = 891.0
-offset_bottom = 363.0
+offset_left = 1124.0
+offset_top = 269.0
+offset_right = 1186.0
+offset_bottom = 300.0
 pivot_offset = Vector2(31, 16)
-text = "gabriel"
+theme_override_fonts/font = ExtResource("8_x0ugj")
+text = "Gabriel"
 metadata/scene_path = "res://Cenas/player_3.tscn"
 
 [node name="bplayer4" type="Button" parent="."]
 layout_mode = 0
-offset_left = 149.0
-offset_top = 539.0
-offset_right = 211.0
-offset_bottom = 570.0
+offset_left = 142.0
+offset_top = 598.0
+offset_right = 204.0
+offset_bottom = 629.0
 pivot_offset = Vector2(31, 16)
-text = "lara"
+theme_override_fonts/font = ExtResource("8_x0ugj")
+text = "Lara"
 metadata/scene_path = "res://Cenas/player_4.tscn"
 
 [node name="bplayer5" type="Button" parent="."]
 layout_mode = 0
-offset_left = 366.0
-offset_top = 537.0
-offset_right = 428.0
-offset_bottom = 568.0
+offset_left = 636.0
+offset_top = 592.0
+offset_right = 698.0
+offset_bottom = 623.0
 pivot_offset = Vector2(31, 16)
-text = "rafael"
+theme_override_fonts/font = ExtResource("8_x0ugj")
+text = "Rafael"
 metadata/scene_path = "res://Cenas/player_5.tscn"
 
 [node name="bplayer6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 591.0
-offset_top = 545.0
-offset_right = 653.0
-offset_bottom = 576.0
+offset_left = 1119.0
+offset_top = 606.0
+offset_right = 1181.0
+offset_bottom = 637.0
 pivot_offset = Vector2(31, 16)
+theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "Julia"
 metadata/scene_path = "res://Cenas/player_6.tscn"
 
