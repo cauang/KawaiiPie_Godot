@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5mq20cgloa0h"]
+[gd_scene load_steps=12 format=3 uid="uid://5mq20cgloa0h"]
 
 [ext_resource type="Script" uid="uid://c0dsvjika0xer" path="res://Cenas/choice.gd" id="1_rfoid"]
 [ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="2_rfoid"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c27bxk7ehdowt" path="res://Cenas/player_5.tscn" id="6_ue8tn"]
 [ext_resource type="PackedScene" uid="uid://chwhiutqayc82" path="res://Cenas/player_6.tscn" id="7_8ggwx"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="8_x0ugj"]
+[ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="9_p5gvq"]
 [ext_resource type="Texture2D" uid="uid://885tjfm3srop" path="res://Assets/KAWAII PIE.png" id="9_x0ugj"]
+[ext_resource type="StyleBox" uid="uid://bj0s3gy2afdb8" path="res://Assets/Estilos de Botão/personagens.tres" id="10_ue8tn"]
 
 [node name="choice" type="Control"]
 layout_mode = 3
@@ -69,73 +71,176 @@ offset_right = 776.0
 offset_bottom = 366.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = ExtResource("9_p5gvq")
+theme_override_styles/disabled_mirrored = ExtResource("9_p5gvq")
+theme_override_styles/disabled = ExtResource("9_p5gvq")
+theme_override_styles/hover_pressed_mirrored = ExtResource("9_p5gvq")
+theme_override_styles/hover_pressed = ExtResource("9_p5gvq")
+theme_override_styles/hover_mirrored = ExtResource("9_p5gvq")
+theme_override_styles/hover = ExtResource("9_p5gvq")
+theme_override_styles/pressed_mirrored = ExtResource("9_p5gvq")
+theme_override_styles/pressed = ExtResource("9_p5gvq")
+theme_override_styles/normal_mirrored = ExtResource("9_p5gvq")
+theme_override_styles/normal = ExtResource("9_p5gvq")
 text = "Go!"
 
 [node name="bplayer1" type="Button" parent="."]
 layout_mode = 2
-offset_left = 166.0
+offset_left = 155.0
 offset_top = 313.0
-offset_right = 228.0
-offset_bottom = 341.0
+offset_right = 236.0
+offset_bottom = 358.0
 pivot_offset = Vector2(31, 16)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_x0ugj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("10_ue8tn")
+theme_override_styles/disabled_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/disabled = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed = ExtResource("10_ue8tn")
+theme_override_styles/hover_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover = ExtResource("10_ue8tn")
+theme_override_styles/pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/pressed = ExtResource("10_ue8tn")
+theme_override_styles/normal_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/normal = ExtResource("10_ue8tn")
 text = "João"
 metadata/scene_path = "res://Cenas/player_1.tscn"
 
 [node name="bplayer2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 609.0
+offset_left = 601.0
 offset_top = 280.0
-offset_right = 681.0
-offset_bottom = 311.0
+offset_right = 691.0
+offset_bottom = 318.0
 pivot_offset = Vector2(36, 16)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0.639216)
 theme_override_fonts/font = ExtResource("8_x0ugj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("10_ue8tn")
+theme_override_styles/disabled_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/disabled = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed = ExtResource("10_ue8tn")
+theme_override_styles/hover_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover = ExtResource("10_ue8tn")
+theme_override_styles/pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/pressed = ExtResource("10_ue8tn")
+theme_override_styles/normal_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/normal = ExtResource("10_ue8tn")
 text = "Maria"
 metadata/scene_path = "res://Cenas/player_2.tscn"
 
 [node name="bplayer3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1067.0
-offset_top = 317.0
-offset_right = 1129.0
-offset_bottom = 348.0
+offset_left = 1046.0
+offset_top = 320.0
+offset_right = 1147.0
+offset_bottom = 357.0
 pivot_offset = Vector2(31, 16)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_x0ugj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("10_ue8tn")
+theme_override_styles/disabled_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/disabled = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed = ExtResource("10_ue8tn")
+theme_override_styles/hover_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover = ExtResource("10_ue8tn")
+theme_override_styles/pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/pressed = ExtResource("10_ue8tn")
+theme_override_styles/normal_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/normal = ExtResource("10_ue8tn")
 text = "Gabriel"
 metadata/scene_path = "res://Cenas/player_3.tscn"
 
 [node name="bplayer4" type="Button" parent="."]
 layout_mode = 0
-offset_left = 167.0
-offset_top = 678.0
-offset_right = 229.0
-offset_bottom = 709.0
+offset_left = 145.0
+offset_top = 669.0
+offset_right = 227.0
+offset_bottom = 714.0
 pivot_offset = Vector2(31, 16)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_x0ugj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("10_ue8tn")
+theme_override_styles/disabled_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/disabled = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed = ExtResource("10_ue8tn")
+theme_override_styles/hover_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover = ExtResource("10_ue8tn")
+theme_override_styles/pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/pressed = ExtResource("10_ue8tn")
+theme_override_styles/normal_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/normal = ExtResource("10_ue8tn")
 text = "Lara"
 metadata/scene_path = "res://Cenas/player_4.tscn"
 
 [node name="bplayer5" type="Button" parent="."]
 layout_mode = 0
-offset_left = 619.0
-offset_top = 682.0
-offset_right = 681.0
-offset_bottom = 713.0
+offset_left = 597.0
+offset_top = 674.0
+offset_right = 699.0
+offset_bottom = 719.0
 pivot_offset = Vector2(31, 16)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_x0ugj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("10_ue8tn")
+theme_override_styles/disabled_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/disabled = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed = ExtResource("10_ue8tn")
+theme_override_styles/hover_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover = ExtResource("10_ue8tn")
+theme_override_styles/pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/pressed = ExtResource("10_ue8tn")
+theme_override_styles/normal_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/normal = ExtResource("10_ue8tn")
 text = "Rafael"
 metadata/scene_path = "res://Cenas/player_5.tscn"
 
 [node name="bplayer6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1069.0
-offset_top = 676.0
-offset_right = 1131.0
-offset_bottom = 707.0
+offset_left = 1057.0
+offset_top = 669.0
+offset_right = 1133.0
+offset_bottom = 714.0
 pivot_offset = Vector2(31, 16)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_x0ugj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("10_ue8tn")
+theme_override_styles/disabled_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/disabled = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover_pressed = ExtResource("10_ue8tn")
+theme_override_styles/hover_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/hover = ExtResource("10_ue8tn")
+theme_override_styles/pressed_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/pressed = ExtResource("10_ue8tn")
+theme_override_styles/normal_mirrored = ExtResource("10_ue8tn")
+theme_override_styles/normal = ExtResource("10_ue8tn")
 text = "Julia"
 metadata/scene_path = "res://Cenas/player_6.tscn"
 
