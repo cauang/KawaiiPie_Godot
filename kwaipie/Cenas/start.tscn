@@ -1,7 +1,78 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdlloqy08xh1a"]
+[gd_scene load_steps=13 format=3 uid="uid://bdlloqy08xh1a"]
 
 [ext_resource type="Script" uid="uid://b833x6s6xckh3" path="res://Cenas/start.gd" id="1_e5x2v"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="2_mtvmb"]
+[ext_resource type="Texture2D" uid="uid://bhd8bvffowwev" path="res://Assets/KAWAII PIE NAME/1.png" id="3_pdire"]
+[ext_resource type="Texture2D" uid="uid://bm5cwcw4g7o8" path="res://Assets/KAWAII PIE NAME/2.png" id="4_w7rwp"]
+[ext_resource type="Texture2D" uid="uid://cdg7g8bpkcal0" path="res://Assets/KAWAII PIE NAME/3.png" id="5_l717j"]
+[ext_resource type="Texture2D" uid="uid://daq0etgct2ecn" path="res://Assets/KAWAII PIE NAME/4.png" id="6_38xwh"]
+[ext_resource type="Texture2D" uid="uid://5qpmig8m8302" path="res://Assets/KAWAII PIE NAME/5.png" id="7_ny1wi"]
+[ext_resource type="Texture2D" uid="uid://bovx8h7knxeff" path="res://Assets/KAWAII PIE NAME/6.png" id="8_g18ae"]
+[ext_resource type="Texture2D" uid="uid://mkov31608x11" path="res://Assets/KAWAII PIE NAME/7.png" id="9_cd7qm"]
+[ext_resource type="Texture2D" uid="uid://j7pvw7f6ioni" path="res://Assets/KAWAII PIE NAME/8.png" id="10_m2jal"]
+[ext_resource type="Texture2D" uid="uid://b1cerh6xsymsi" path="res://Assets/KAWAII PIE NAME/9.png" id="11_x7yg6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7slwi"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("3_pdire")
+}, {
+"duration": 1.5,
+"texture": ExtResource("4_w7rwp")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_l717j")
+}, {
+"duration": 1.5,
+"texture": ExtResource("6_38xwh")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_ny1wi")
+}, {
+"duration": 1.5,
+"texture": ExtResource("8_g18ae")
+}, {
+"duration": 1.5,
+"texture": ExtResource("9_cd7qm")
+}, {
+"duration": 1.5,
+"texture": ExtResource("10_m2jal")
+}, {
+"duration": 1.5,
+"texture": ExtResource("11_x7yg6")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_x7yg6")
+}, {
+"duration": 1.5,
+"texture": ExtResource("10_m2jal")
+}, {
+"duration": 1.5,
+"texture": ExtResource("9_cd7qm")
+}, {
+"duration": 1.5,
+"texture": ExtResource("8_g18ae")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_ny1wi")
+}, {
+"duration": 1.5,
+"texture": ExtResource("6_38xwh")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_l717j")
+}, {
+"duration": 1.5,
+"texture": ExtResource("4_w7rwp")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_pdire")
+}],
+"loop": true,
+"name": &"titulo",
+"speed": 10.0
+}]
 
 [node name="Start" type="CanvasLayer"]
 script = ExtResource("1_e5x2v")
@@ -50,6 +121,14 @@ theme_override_font_sizes/font_size = 30
 text = "Sair"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="TituloAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(659, 133)
+scale = Vector2(0.34625, 0.25275)
+sprite_frames = SubResource("SpriteFrames_7slwi")
+animation = &"titulo"
+autoplay = "titulo"
+frame_progress = 0.566995
 
 [connection signal="pressed" from="começar" to="." method="_on_começar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
