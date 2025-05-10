@@ -15,6 +15,21 @@ offset_bottom = 721.0
 size_flags_vertical = 4
 color = Color(0.950569, 0.814311, 0.923254, 1)
 
+[node name="spawnPointPlayer1" type="Node2D" parent="."]
+position = Vector2(234, 463)
+
+[node name="spawnPointPlayer2" type="Node2D" parent="."]
+position = Vector2(1040, 463)
+
+[node name="WinnerLabel" type="Label" parent="."]
+modulate = Color(1, 0, 1, 1)
+offset_left = 619.0
+offset_top = 62.0
+offset_right = 676.0
+offset_bottom = 85.0
+text = "Winner"
+horizontal_alignment = 1
+
 [node name="recomeçar" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,23 +67,8 @@ text = "Sair"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="spawnPointPPlayer2" type="Node2D" parent="."]
-position = Vector2(1040, 463)
-
-[node name="spawnPointPlayer1" type="Node2D" parent="."]
-position = Vector2(234, 463)
-
 [node name="Pie" parent="." instance=ExtResource("5_v1lf6")]
 position = Vector2(634, 233)
-
-[node name="WinnerLabel" type="Label" parent="."]
-modulate = Color(1, 0, 1, 1)
-offset_left = 619.0
-offset_top = 62.0
-offset_right = 676.0
-offset_bottom = 85.0
-text = "Winner"
-horizontal_alignment = 1
 
 [connection signal="pressed" from="recomeçar" to="." method="_on_recomeçar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
