@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bdlloqy08xh1a"]
+[gd_scene load_steps=53 format=3 uid="uid://bdlloqy08xh1a"]
 
 [ext_resource type="Script" uid="uid://b833x6s6xckh3" path="res://Cenas/start.gd" id="1_e5x2v"]
 [ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_38xwh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://54mb7tsq3qy" path="res://Assets/IconsKawaii/sprites/applepie(sprite).png" id="3_ny1wi"]
 [ext_resource type="Texture2D" uid="uid://bhd8bvffowwev" path="res://Assets/KAWAII PIE NAME/1.png" id="3_pdire"]
 [ext_resource type="Texture2D" uid="uid://c3747ihed14gk" path="res://ballonheart(sprites).png" id="3_w7rwp"]
+[ext_resource type="Texture2D" uid="uid://dlea3bvw2i0cr" path="res://Assets/IconsKawaii/sprites/laços.png" id="4_g18ae"]
 [ext_resource type="Texture2D" uid="uid://bm5cwcw4g7o8" path="res://Assets/KAWAII PIE NAME/2.png" id="4_w7rwp"]
 [ext_resource type="Texture2D" uid="uid://cdg7g8bpkcal0" path="res://Assets/KAWAII PIE NAME/3.png" id="5_l717j"]
 [ext_resource type="Texture2D" uid="uid://daq0etgct2ecn" path="res://Assets/KAWAII PIE NAME/4.png" id="6_38xwh"]
@@ -68,6 +69,42 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tvobk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daggq"]
+atlas = ExtResource("4_g18ae")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro6tq"]
+atlas = ExtResource("4_g18ae")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwwwv"]
+atlas = ExtResource("4_g18ae")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3n1mh"]
+atlas = ExtResource("4_g18ae")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n40m8"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_daggq")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_ro6tq")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_fwwwv")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_3n1mh")
 }],
 "loop": true,
 "name": &"default",
@@ -287,7 +324,7 @@ animations = [{
 "duration": 1.5,
 "texture": SubResource("AtlasTexture_woyn1")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
@@ -302,17 +339,17 @@ offset_right = 1282.0
 offset_bottom = 721.0
 size_flags_vertical = 4
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background"]
+[node name="fundo" type="AnimatedSprite2D" parent="Background"]
 position = Vector2(80.5, 567.5)
 sprite_frames = SubResource("SpriteFrames_tvobk")
 autoplay = "default"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Background"]
+[node name="fundo2" type="AnimatedSprite2D" parent="Background"]
 position = Vector2(693.5, 567.5)
 sprite_frames = SubResource("SpriteFrames_tvobk")
 autoplay = "default"
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Background"]
+[node name="fundo3" type="AnimatedSprite2D" parent="Background"]
 position = Vector2(1214.5, 568.5)
 sprite_frames = SubResource("SpriteFrames_tvobk")
 autoplay = "default"
@@ -327,6 +364,20 @@ position = Vector2(173, 544)
 scale = Vector2(0.764444, 0.764444)
 sprite_frames = SubResource("SpriteFrames_daggq")
 flip_h = true
+
+[node name="laços" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(1137, 454)
+rotation = 0.785397
+scale = Vector2(0.326, 0.326)
+sprite_frames = SubResource("SpriteFrames_n40m8")
+autoplay = "default"
+
+[node name="laços2" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(109, 465)
+rotation = -0.523598
+scale = Vector2(0.326, 0.326)
+sprite_frames = SubResource("SpriteFrames_n40m8")
+autoplay = "default"
 
 [node name="começar" type="Button" parent="."]
 anchors_preset = 8
