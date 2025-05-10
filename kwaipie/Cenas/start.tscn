@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://bdlloqy08xh1a"]
+[gd_scene load_steps=54 format=3 uid="uid://bdlloqy08xh1a"]
 
 [ext_resource type="Script" uid="uid://b833x6s6xckh3" path="res://Cenas/start.gd" id="1_e5x2v"]
 [ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_38xwh"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5cwcw4g7o8" path="res://Assets/KAWAII PIE NAME/2.png" id="4_w7rwp"]
 [ext_resource type="Texture2D" uid="uid://cdg7g8bpkcal0" path="res://Assets/KAWAII PIE NAME/3.png" id="5_l717j"]
 [ext_resource type="Texture2D" uid="uid://daq0etgct2ecn" path="res://Assets/KAWAII PIE NAME/4.png" id="6_38xwh"]
+[ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/estilo botãorosa/new_style_box_flat.tres" id="6_cd7qm"]
 [ext_resource type="Texture2D" uid="uid://5qpmig8m8302" path="res://Assets/KAWAII PIE NAME/5.png" id="7_ny1wi"]
 [ext_resource type="Texture2D" uid="uid://bovx8h7knxeff" path="res://Assets/KAWAII PIE NAME/6.png" id="8_g18ae"]
 [ext_resource type="Texture2D" uid="uid://mkov31608x11" path="res://Assets/KAWAII PIE NAME/7.png" id="9_cd7qm"]
@@ -393,6 +394,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_mtvmb")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = ExtResource("6_cd7qm")
 text = "Iniciar"
 
 [node name="cancelar" type="Button" parent="."]
@@ -402,9 +404,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -79.0
-offset_top = 91.0
+offset_top = 89.0
 offset_right = 87.0
-offset_bottom = 148.0
+offset_bottom = 146.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -412,6 +414,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.686275, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_mtvmb")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("6_cd7qm")
 text = "Sair"
 
 [node name="balaocoração" type="AnimatedSprite2D" parent="."]

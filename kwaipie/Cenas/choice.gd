@@ -24,14 +24,14 @@ func _ready():
 # Quando um botão é pressionado, esse método é chamado
 func _on_button_pressed(button):
 	var player_name = button.name  # Ex: bplayer1
-	var player_number = player_name.substr(7, player_name.length() - 7)  # Extrai o número do jogador (1, 2, 3, ...)
-	var player_path = "res://Cenas/player_" + player_number + ".tscn"  # Caminho correto para a cena do jogador
+	var player_number = player_name.substr(7, player_name.length() - 7)  #to extraindo o numero do jogador aqui
+	var player_path = "res://Cenas/player_" + player_number + ".tscn"  # cauan coloca o caminho certo
 
 	if selected_players.has(player_path):
-		# Já está selecionado → desmarca
+		# verificando se esta marcado para poder desmarcar
 		selected_players.erase(player_path)
 		selected_buttons.erase(button)
-		button.modulate = Color(1, 1, 1)  # Branco
+		button.modulate = Color(1, 1, 1)  # default
 		print("Jogador removido:", player_path)
 	else:
 		# Marca até dois jogadores
@@ -50,8 +50,8 @@ func update_button_labels():
 	for child in get_children():
 		if child is Button and child.name.begins_with("bplayer") and child.has_node("PlayerIndicator"):
 			var label = child.get_node("PlayerIndicator")
-			var player_number = child.name.substr(7, child.name.length() - 7)  # Extrai o número do jogador
-			var path = "res://Cenas/player_" + player_number + ".tscn"  # Caminho correto para a cena do jogador
+			var player_number = child.name.substr(7, child.name.length() - 7) 
+			var path = "res://Cenas/player_" + player_number + ".tscn" 
 			if selected_players.size() > 0 and selected_players[0] == path:
 				label.text = "1P"
 			elif selected_players.size() > 1 and selected_players[1] == path:
