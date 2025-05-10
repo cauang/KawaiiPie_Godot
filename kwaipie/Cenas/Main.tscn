@@ -18,11 +18,11 @@ position = Vector2(640, 234)
 
 [node name="WinnerLabel" type="Label" parent="."]
 modulate = Color(1, 0, 1, 1)
-offset_left = 623.0
-offset_top = 87.0
-offset_right = 680.0
-offset_bottom = 110.0
-text = "Winner"
+offset_left = 611.0
+offset_top = 88.0
+offset_right = 668.0
+offset_bottom = 111.0
+pivot_offset = Vector2(29, 12)
 horizontal_alignment = 1
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]

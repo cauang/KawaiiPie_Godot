@@ -89,7 +89,7 @@ func _process(delta):
 
 func update_timer(delta):
 	var time_ended = Global.update_timer(delta)
-	time_label.text = ceil(Global.time_left) #estilizar aqui o tempo testante
+	time_label.text = "Tempo: %d" % ceil(Global.time_left) #estilizar aqui o tempo testante
 	
 	if time_ended:
 		# Verifica posição da torta quando o tempo acaba
