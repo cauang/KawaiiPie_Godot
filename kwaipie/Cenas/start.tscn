@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5cwcw4g7o8" path="res://Assets/KAWAII PIE NAME/2.png" id="4_w7rwp"]
 [ext_resource type="Texture2D" uid="uid://cdg7g8bpkcal0" path="res://Assets/KAWAII PIE NAME/3.png" id="5_l717j"]
 [ext_resource type="Texture2D" uid="uid://daq0etgct2ecn" path="res://Assets/KAWAII PIE NAME/4.png" id="6_38xwh"]
-[ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/estilo botãorosa/new_style_box_flat.tres" id="6_cd7qm"]
+[ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="6_cd7qm"]
 [ext_resource type="Texture2D" uid="uid://5qpmig8m8302" path="res://Assets/KAWAII PIE NAME/5.png" id="7_ny1wi"]
 [ext_resource type="Texture2D" uid="uid://bovx8h7knxeff" path="res://Assets/KAWAII PIE NAME/6.png" id="8_g18ae"]
 [ext_resource type="Texture2D" uid="uid://mkov31608x11" path="res://Assets/KAWAII PIE NAME/7.png" id="9_cd7qm"]
@@ -356,7 +356,7 @@ sprite_frames = SubResource("SpriteFrames_tvobk")
 autoplay = "default"
 
 [node name="torta" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(1060, 553)
+position = Vector2(1107, 545)
 scale = Vector2(0.764444, 0.764444)
 sprite_frames = SubResource("SpriteFrames_daggq")
 
@@ -367,14 +367,14 @@ sprite_frames = SubResource("SpriteFrames_daggq")
 flip_h = true
 
 [node name="laços" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(1137, 454)
+position = Vector2(1179, 454)
 rotation = 0.785397
 scale = Vector2(0.326, 0.326)
 sprite_frames = SubResource("SpriteFrames_n40m8")
 autoplay = "default"
 
 [node name="laços2" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(109, 465)
+position = Vector2(86, 449)
 rotation = -0.523598
 scale = Vector2(0.326, 0.326)
 sprite_frames = SubResource("SpriteFrames_n40m8")
@@ -392,8 +392,21 @@ offset_right = 129.0
 offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.777978, 0.193114, 0.401348, 1)
 theme_override_fonts/font = ExtResource("2_mtvmb")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = ExtResource("6_cd7qm")
+theme_override_styles/disabled_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/disabled = ExtResource("6_cd7qm")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/hover_pressed = ExtResource("6_cd7qm")
+theme_override_styles/hover_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/hover = ExtResource("6_cd7qm")
+theme_override_styles/pressed_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/pressed = ExtResource("6_cd7qm")
+theme_override_styles/normal_mirrored = ExtResource("6_cd7qm")
 theme_override_styles/normal = ExtResource("6_cd7qm")
 text = "Iniciar"
 
@@ -414,6 +427,16 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.686275, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_mtvmb")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("6_cd7qm")
+theme_override_styles/disabled_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/disabled = ExtResource("6_cd7qm")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/hover_pressed = ExtResource("6_cd7qm")
+theme_override_styles/hover_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/hover = ExtResource("6_cd7qm")
+theme_override_styles/pressed_mirrored = ExtResource("6_cd7qm")
+theme_override_styles/pressed = ExtResource("6_cd7qm")
+theme_override_styles/normal_mirrored = ExtResource("6_cd7qm")
 theme_override_styles/normal = ExtResource("6_cd7qm")
 text = "Sair"
 
