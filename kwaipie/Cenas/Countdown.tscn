@@ -9,6 +9,7 @@ metadata/_edit_vertical_guides_ = [652.0]
 metadata/_edit_horizontal_guides_ = [360.0]
 
 [node name="CountdownLabel" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
 anchors_preset = -1
 anchor_left = 0.508
 anchor_top = 0.498
