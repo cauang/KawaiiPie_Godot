@@ -14,23 +14,12 @@ offset_top = 1.0
 offset_right = 1282.0
 offset_bottom = 721.0
 size_flags_vertical = 4
-color = Color(0.950569, 0.814311, 0.923254, 1)
 
 [node name="spawnPointPlayer1" type="Node2D" parent="."]
 position = Vector2(234, 463)
 
 [node name="spawnPointPlayer2" type="Node2D" parent="."]
 position = Vector2(1040, 463)
-
-[node name="WinnerLabel" type="Label" parent="."]
-modulate = Color(0.776471, 0, 0.14902, 1)
-offset_left = 613.0
-offset_top = 95.0
-offset_right = 670.0
-offset_bottom = 118.0
-pivot_offset = Vector2(29.9601, 12.3444)
-text = "Winner"
-horizontal_alignment = 1
 
 [node name="recomeçar" type="Button" parent="."]
 anchors_preset = 8
@@ -68,6 +57,17 @@ theme_override_font_sizes/font_size = 30
 text = "Sair"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="WinnerLabel" type="Label" parent="."]
+modulate = Color(0.94902, 0.815686, 0.921569, 1)
+offset_left = 332.0
+offset_top = 80.0
+offset_right = 947.0
+offset_bottom = 160.0
+pivot_offset = Vector2(29, 12)
+theme_override_fonts/font = ExtResource("2_pmyos")
+theme_override_font_sizes/font_size = 66
+horizontal_alignment = 1
 
 [connection signal="pressed" from="recomeçar" to="." method="_on_recomeçar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]

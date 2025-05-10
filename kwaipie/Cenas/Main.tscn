@@ -18,10 +18,10 @@ position = Vector2(640, 234)
 
 [node name="WinnerLabel" type="Label" parent="."]
 modulate = Color(0.94902, 0.815686, 0.921569, 1)
-offset_left = 428.0
-offset_top = 74.0
-offset_right = 485.0
-offset_bottom = 154.0
+offset_left = 332.0
+offset_top = 80.0
+offset_right = 947.0
+offset_bottom = 160.0
 pivot_offset = Vector2(29, 12)
 theme_override_fonts/font = ExtResource("3_k74ne")
 theme_override_font_sizes/font_size = 66
@@ -35,9 +35,9 @@ position = Vector2(1070, 531)
 
 [node name="TimeLabel" type="Label" parent="."]
 modulate = Color(1, 0.458824, 1, 1)
-offset_left = 617.0
-offset_top = 187.0
-offset_right = 657.0
-offset_bottom = 210.0
+offset_left = 532.0
+offset_top = 182.0
+offset_right = 744.0
+offset_bottom = 214.0
 theme_override_fonts/font = ExtResource("3_k74ne")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 51
