@@ -24,6 +24,10 @@ Global="*res://Global.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[global_group]
+
+player_preview=""
+
 [input]
 
 move_p1={

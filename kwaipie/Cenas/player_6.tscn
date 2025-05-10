@@ -73,7 +73,7 @@ offset_bottom = -67.0
 position = Vector2(-9.5, -65.5)
 shape = ExtResource("9_7botw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player_preview"]]
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_1xaqj")

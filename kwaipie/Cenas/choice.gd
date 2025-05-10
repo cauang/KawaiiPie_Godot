@@ -6,6 +6,13 @@ var selected_buttons := []  # Referência aos botões selecionados
 @onready var confirm_button = $ConfirmButton
 
 func _ready():
+	# Ativa animação 'ganhou' nos players visíveis
+	for child in get_children():
+		if child.is_in_group("player_preview"):
+			var anim = child.get_node("AnimatedSprite2D")
+			if anim and anim.has_animation("ganhou"):
+				anim.play("ganhou")
+				
 	# Percorre todos os nós filhos diretos da cena e conecta os botões com nome "bplayer*"
 	for child in get_children():
 		if child is Button and child.name.begins_with("bplayer"):

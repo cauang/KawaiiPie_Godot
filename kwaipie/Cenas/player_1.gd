@@ -14,7 +14,7 @@ func _ready():
 		animated_player.play("idle")
 	else:
 		printerr("AnimatedSprite2D não encontrado")
-
+		
 func set_animation_intensity(intensity: float):
 	# Para P2, invertemos a intensidade
 	var actual_intensity = intensity if is_player1 else (1.0 - intensity)

@@ -58,7 +58,7 @@ animations = [{
 collision_mask = 2
 script = ExtResource("1_jifa4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player_preview"]]
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_kjvkc")

@@ -54,7 +54,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Player1" type="CharacterBody2D" groups=["player_preview"]]
 collision_mask = 2
 script = ExtResource("1_d8nxv")
 
@@ -62,7 +62,7 @@ script = ExtResource("1_d8nxv")
 position = Vector2(-2, -131)
 scale = Vector2(1.58637, 1.58351)
 sprite_frames = SubResource("SpriteFrames_hdt88")
-animation = &"ganhou"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]
