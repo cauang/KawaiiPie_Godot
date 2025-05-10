@@ -47,6 +47,7 @@ func setup_player(player: Node, index: int):
 	else:
 		player2 = player
 
+
 func display_winner():
 	# Você pode implementar lógica para mostrar o vencedor aqui
 	pass
