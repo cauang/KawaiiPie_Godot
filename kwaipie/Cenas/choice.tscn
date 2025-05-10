@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://5mq20cgloa0h"]
+[gd_scene load_steps=10 format=3 uid="uid://5mq20cgloa0h"]
 
 [ext_resource type="Script" uid="uid://c0dsvjika0xer" path="res://Cenas/choice.gd" id="1_rfoid"]
 [ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="2_rfoid"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c27bxk7ehdowt" path="res://Cenas/player_5.tscn" id="6_ue8tn"]
 [ext_resource type="PackedScene" uid="uid://chwhiutqayc82" path="res://Cenas/player_6.tscn" id="7_8ggwx"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="8_x0ugj"]
+[ext_resource type="Texture2D" uid="uid://885tjfm3srop" path="res://Assets/KAWAII PIE.png" id="9_x0ugj"]
 
 [node name="choice" type="Control"]
 layout_mode = 3
@@ -15,6 +16,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_rfoid")
+metadata/_edit_horizontal_guides_ = [48.0, 664.0, 595.0, 314.0]
+metadata/_edit_vertical_guides_ = [99.0, 1201.0, 198.0, 650.0, 1099.0]
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -30,27 +33,27 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player1" parent="Players" instance=ExtResource("2_rfoid")]
-position = Vector2(183, 163)
+position = Vector2(194, 187)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player2" parent="Players" instance=ExtResource("3_x0ugj")]
-position = Vector2(670, 164)
+position = Vector2(640, 164)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player3" parent="Players" instance=ExtResource("4_mvjdu")]
-position = Vector2(1151, 164)
+position = Vector2(1097, 179)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player4" parent="Players" instance=ExtResource("5_p5gvq")]
-position = Vector2(178, 491)
+position = Vector2(193, 564)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player5" parent="Players" instance=ExtResource("6_ue8tn")]
-position = Vector2(668, 475)
+position = Vector2(651, 553)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player6" parent="Players" instance=ExtResource("7_8ggwx")]
-position = Vector2(1151, 501)
+position = Vector2(1100, 564)
 scale = Vector2(0.4, 0.4)
 
 [node name="ConfirmButton" type="Button" parent="."]
@@ -60,10 +63,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 579.0
-offset_top = 629.0
-offset_right = 691.0
-offset_bottom = 691.0
+offset_left = 481.0
+offset_top = 304.0
+offset_right = 776.0
+offset_bottom = 366.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("8_x0ugj")
@@ -72,10 +75,10 @@ text = "Go!"
 
 [node name="bplayer1" type="Button" parent="."]
 layout_mode = 2
-offset_left = 149.0
-offset_top = 269.0
-offset_right = 211.0
-offset_bottom = 300.0
+offset_left = 166.0
+offset_top = 313.0
+offset_right = 228.0
+offset_bottom = 341.0
 pivot_offset = Vector2(31, 16)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "João"
@@ -83,10 +86,10 @@ metadata/scene_path = "res://Cenas/player_1.tscn"
 
 [node name="bplayer2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 635.0
-offset_top = 269.0
-offset_right = 707.0
-offset_bottom = 300.0
+offset_left = 609.0
+offset_top = 280.0
+offset_right = 681.0
+offset_bottom = 311.0
 pivot_offset = Vector2(36, 16)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "Maria"
@@ -94,10 +97,10 @@ metadata/scene_path = "res://Cenas/player_2.tscn"
 
 [node name="bplayer3" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1124.0
-offset_top = 269.0
-offset_right = 1186.0
-offset_bottom = 300.0
+offset_left = 1067.0
+offset_top = 317.0
+offset_right = 1129.0
+offset_bottom = 348.0
 pivot_offset = Vector2(31, 16)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "Gabriel"
@@ -105,10 +108,10 @@ metadata/scene_path = "res://Cenas/player_3.tscn"
 
 [node name="bplayer4" type="Button" parent="."]
 layout_mode = 0
-offset_left = 142.0
-offset_top = 598.0
-offset_right = 204.0
-offset_bottom = 629.0
+offset_left = 167.0
+offset_top = 678.0
+offset_right = 229.0
+offset_bottom = 709.0
 pivot_offset = Vector2(31, 16)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "Lara"
@@ -116,10 +119,10 @@ metadata/scene_path = "res://Cenas/player_4.tscn"
 
 [node name="bplayer5" type="Button" parent="."]
 layout_mode = 0
-offset_left = 636.0
-offset_top = 592.0
-offset_right = 698.0
-offset_bottom = 623.0
+offset_left = 619.0
+offset_top = 682.0
+offset_right = 681.0
+offset_bottom = 713.0
 pivot_offset = Vector2(31, 16)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "Rafael"
@@ -127,14 +130,44 @@ metadata/scene_path = "res://Cenas/player_5.tscn"
 
 [node name="bplayer6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1119.0
-offset_top = 606.0
-offset_right = 1181.0
-offset_bottom = 637.0
+offset_left = 1069.0
+offset_top = 676.0
+offset_right = 1131.0
+offset_bottom = 707.0
 pivot_offset = Vector2(31, 16)
 theme_override_fonts/font = ExtResource("8_x0ugj")
 text = "Julia"
 metadata/scene_path = "res://Cenas/player_6.tscn"
+
+[node name="KawaiiPie" type="Sprite2D" parent="."]
+position = Vector2(197, 175)
+scale = Vector2(0.3035, 0.3035)
+texture = ExtResource("9_x0ugj")
+
+[node name="KawaiiPie6" type="Sprite2D" parent="."]
+position = Vector2(194, 530)
+scale = Vector2(0.3035, 0.3035)
+texture = ExtResource("9_x0ugj")
+
+[node name="KawaiiPie3" type="Sprite2D" parent="."]
+position = Vector2(653, 539)
+scale = Vector2(0.3035, 0.3035)
+texture = ExtResource("9_x0ugj")
+
+[node name="KawaiiPie5" type="Sprite2D" parent="."]
+position = Vector2(646, 143)
+scale = Vector2(0.3035, 0.3035)
+texture = ExtResource("9_x0ugj")
+
+[node name="KawaiiPie7" type="Sprite2D" parent="."]
+position = Vector2(1098, 180)
+scale = Vector2(0.3035, 0.3035)
+texture = ExtResource("9_x0ugj")
+
+[node name="KawaiiPie4" type="Sprite2D" parent="."]
+position = Vector2(1097, 530)
+scale = Vector2(0.3035, 0.3035)
+texture = ExtResource("9_x0ugj")
 
 [connection signal="pressed" from="ConfirmButton" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="bplayer1" to="." method="_on_player_1_pressed"]
