@@ -1,8 +1,8 @@
 import serial
 import keyboard
 
-# Configure aqui sua porta serial e baud rate
-ser = serial.Serial('COM3', 9600, timeout=1)  # Altere 'COM3' para a porta certa no seu PC
+
+ser = serial.Serial('COM3', 9600, timeout=1)  # Altere 'COM3' para a porta certa do PC (Porta USB)
 
 print("Aguardando comandos do ESP32...")
 
