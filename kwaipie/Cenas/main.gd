@@ -137,7 +137,8 @@ func check_winner():
 
 func end_game(winner):
 	game_over = true
-	Global.stop_timer()  # Nova linha para parar o timer
+	Global.stop_timer()
+	Global.last_winner = winner
 	
 	# Mantém sua lógica original de vitória
 	if winner == 0:

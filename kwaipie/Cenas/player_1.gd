@@ -23,3 +23,10 @@ func set_animation_intensity(intensity: float):
 		animated_player.play("perdeu")
 	else:
 		animated_player.play("idle")
+		
+func set_game_over_state(is_winner: bool):
+	if has_node("AnimatedSprite2D"):
+		if is_winner:
+			$AnimatedSprite2D.play("ganhou")  # Animação de vitória
+		else:
+			$AnimatedSprite2D.play("pie")  # Animação de derrota

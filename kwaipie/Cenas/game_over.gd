@@ -42,21 +42,31 @@ func setup_player(player: Node, index: int):
 	player.position = spawn_point_1.position if index == 0 else spawn_point_2.position
 	player.is_player1 = index == 0
 	
+	# Configura a expressão do jogador
+	if player.has_method("set_game_over_state"):
+		if Global.last_winner == 1:
+			player.set_game_over_state(index == 0) # Player1 ganhou
+		elif Global.last_winner == 2:
+			player.set_game_over_state(index == 1) # Player2 ganhou
+		else:
+			player.set_game_over_state(false) # Tempo esgotado
+	
 	if index == 0:
 		player1 = player
 	else:
 		player2 = player
 
-
 func display_winner():
-	# Você pode implementar lógica para mostrar o vencedor aqui
-	pass
-
-
+	match Global.last_winner:
+		1:
+			winner_label.text = "Player 1 Venceu!!!"
+		2:
+			winner_label.text = "Player 2 Venceu!!!"
+		_:
+			winner_label.text = "Tempo Esgotado!"
 
 func _on_cancelar_pressed():
 	get_tree().quit()
-
 
 func _on_recomeçar_pressed():
 	get_tree().change_scene_to_file("res://Cenas/start.tscn")

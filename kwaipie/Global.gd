@@ -5,6 +5,7 @@ var chosen_players := []
 var tempo = 0  # Tempo selecionado na cena Time
 var time_left = 0  # Tempo restante atual
 var timer_running = false  # Estado do temporizador
+var last_winner = 0 
 
 # Função para iniciar o temporizador
 func start_timer():
