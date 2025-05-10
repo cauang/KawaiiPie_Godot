@@ -170,7 +170,7 @@ autoplay = "titulo"
 frame_progress = 0.382169
 
 [node name="ballonhearts" type="Sprite2D" parent="."]
-position = Vector2(781, 274)
+position = Vector2(1011, 218)
 scale = Vector2(0.264474, 0.264474)
 texture = ExtResource("12_w7rwp")
 hframes = 5
