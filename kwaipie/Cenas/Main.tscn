@@ -17,7 +17,6 @@ color = Color(0.950569, 0.814311, 0.923254, 1)
 position = Vector2(640, 234)
 
 [node name="WinnerLabel" type="Label" parent="."]
-visible = false
 modulate = Color(1, 0, 1, 1)
 offset_left = 623.0
 offset_top = 87.0
@@ -31,3 +30,9 @@ position = Vector2(234, 516)
 
 [node name="SpawnPoint2" type="Marker2D" parent="."]
 position = Vector2(1070, 531)
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 624.0
+offset_top = 157.0
+offset_right = 664.0
+offset_bottom = 180.0
