@@ -55,3 +55,7 @@ func display_winner():
 
 func _on_cancelar_pressed():
 	get_tree().quit()
+
+
+func _on_recomeçar_pressed():
+	get_tree().change_scene_to_file("res://Cenas/start.tscn")

@@ -71,5 +71,5 @@ offset_bottom = 110.0
 text = "Winner"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="recomeçar" to="." method="_on_começar_pressed"]
+[connection signal="pressed" from="recomeçar" to="." method="_on_recomeçar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
