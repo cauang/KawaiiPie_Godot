@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://byar7fftflpro"]
+[gd_scene load_steps=12 format=3 uid="uid://byar7fftflpro"]
 
 [ext_resource type="Script" uid="uid://ml8a1hd57syc" path="res://Cenas/player_3.gd" id="1_umavm"]
 [ext_resource type="Texture2D" uid="uid://dh1ld2eewg7sn" path="res://Assets/Sem Fundo/Boy2.1.png" id="2_supqt"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d181l0odsxac7" path="res://Assets/Sem Fundo/Boy2PERDEU.png" id="7_k01df"]
 [ext_resource type="Texture2D" uid="uid://dn2fyjqcut45k" path="res://Assets/Sem Fundo/Boy2PIE.png" id="8_ctnyf"]
 [ext_resource type="Shape2D" uid="uid://dnw0w4puk3bmj" path="res://Resources/CollisionShapes/boy2.tres" id="9_f7hsc"]
+[ext_resource type="Texture2D" uid="uid://dijvt2hhvf3rb" path="res://Assets/Sem Fundo/Boy2RAIVA.png" id="9_supqt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rtnbq"]
 animations = [{
@@ -52,6 +53,14 @@ animations = [{
 "loop": true,
 "name": &"pie",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_supqt")
+}],
+"loop": true,
+"name": &"raiva",
+"speed": 5.0
 }]
 
 [node name="Player3" type="CharacterBody2D"]
@@ -62,7 +71,7 @@ script = ExtResource("1_umavm")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_rtnbq")
-animation = &"perdeu"
+animation = &"raiva"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dl6wruw3gvs0o"]
+[gd_scene load_steps=12 format=3 uid="uid://dl6wruw3gvs0o"]
 
 [ext_resource type="Script" uid="uid://j6m7o74cc8u4" path="res://Cenas/player_2.gd" id="1_ildhv"]
 [ext_resource type="Texture2D" uid="uid://cni0syymqpwmi" path="res://Assets/Sem Fundo/Girl1.1.png" id="2_255ym"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dm6363nhhnobb" path="res://Assets/Sem Fundo/Girl1GANHOU.png" id="6_4aom4"]
 [ext_resource type="Texture2D" uid="uid://c38w8hy88cn2a" path="res://Assets/Sem Fundo/Girl1PERDEU.png" id="7_ro1pu"]
 [ext_resource type="Texture2D" uid="uid://2abfypxova74" path="res://Assets/Sem Fundo/Girl1PIE.png" id="8_wria0"]
+[ext_resource type="Texture2D" uid="uid://btopr54xvwq4m" path="res://Assets/Sem Fundo/Girl1RAIVA.png" id="9_255ym"]
 [ext_resource type="Shape2D" uid="uid://oim70n4byuba" path="res://Resources/CollisionShapes/girl1.tres" id="9_qsqf0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tibwc"]
@@ -55,6 +56,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_255ym")
+}],
+"loop": true,
+"name": &"raiva",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_ro1pu")
 }, {
 "duration": 1.0,
@@ -73,7 +82,7 @@ script = ExtResource("1_ildhv")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_tibwc")
-animation = &"susto"
+animation = &"raiva"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]

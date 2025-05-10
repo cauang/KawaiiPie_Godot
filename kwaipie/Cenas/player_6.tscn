@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://chwhiutqayc82"]
+[gd_scene load_steps=12 format=3 uid="uid://chwhiutqayc82"]
 
 [ext_resource type="Script" uid="uid://dhvrlypg5ut5l" path="res://Cenas/player_6.gd" id="1_sr7v8"]
 [ext_resource type="Texture2D" uid="uid://bh062sgw0bols" path="res://Assets/Sem Fundo/Girl3.1.png" id="2_ddie3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c6qjyaumyevdf" path="res://Assets/Sem Fundo/Girl3PERDEU.png" id="7_hbi45"]
 [ext_resource type="Texture2D" uid="uid://dvfhldw5gqvc3" path="res://Assets/Sem Fundo/Girl3PIE.png" id="8_q3cl8"]
 [ext_resource type="Shape2D" uid="uid://d3dqftlkmyq83" path="res://Resources/CollisionShapes/girl3.tres" id="9_7botw"]
+[ext_resource type="Texture2D" uid="uid://bn3vuam68jh6v" path="res://Assets/Sem Fundo/Girl3RAIVA.png" id="10_ddie3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1xaqj"]
 animations = [{
@@ -55,6 +56,14 @@ animations = [{
 "loop": true,
 "name": &"pie",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ddie3")
+}],
+"loop": true,
+"name": &"raiva",
+"speed": 5.0
 }]
 
 [node name="Player6" type="CharacterBody2D"]
@@ -77,7 +86,7 @@ shape = ExtResource("9_7botw")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_1xaqj")
-animation = &"perdeu"
+animation = &"raiva"
 autoplay = "idle"
 
 [node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
