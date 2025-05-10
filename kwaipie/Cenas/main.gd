@@ -23,26 +23,45 @@ var player1: Node2D = null
 var player2: Node2D = null
 
 func _ready():
+	# Configuração inicial
 	pie_start_x = pie.position.x
 	winner_label.visible = false
+	time_label.visible = true
 	
+	# Pausa o jogo imediatamente
+	get_tree().paused = true
+	
+	# Carrega e mostra a cena de countdown
+	var countdown = preload("res://Cenas/Countdown.tscn").instantiate()
+	add_child(countdown)
+	countdown.connect("countdown_finished", _on_countdown_finished)
+	
+	# Verificação dos jogadores selecionados
 	if Global.chosen_players.size() < 2:
 		push_error("Erro: Número insuficiente de jogadores selecionados")
 		return
 	
-	Global.start_timer()
+	# Spawn dos jogadores (o jogo ainda está pausado)
 	spawn_players()
 
+func _on_countdown_finished():
+	# Despausa o jogo quando o countdown termina
+	get_tree().paused = false
+	Global.start_timer()  # Começa a contar o tempo de jogo
+
 func _process(delta):
-	if game_over:
+	if game_over || get_tree().paused:
 		return
 	
+	# Atualiza o timer
 	update_timer(delta)
 	
+	# Cooldown do movimento
 	if cooldown_timer > 0:
 		cooldown_timer -= delta
 		return
 	
+	# Controles dos jogadores
 	var moved = false
 	
 	if Input.is_action_just_pressed("move_p1"):
@@ -53,15 +72,18 @@ func _process(delta):
 		pie.position.x -= pie_movement
 		moved = true
 	
+	# Atualizações do jogo
 	if moved:
 		cooldown_timer = cooldown_time
 	
+	# Limita o movimento da torta
 	pie.position.x = clamp(
 		pie.position.x,
 		pie_start_x - pie_limit,
 		pie_start_x + pie_limit
 	)
 	
+	# Atualiza animações e verifica vitória
 	update_player_animations()
 	check_winner()
 
