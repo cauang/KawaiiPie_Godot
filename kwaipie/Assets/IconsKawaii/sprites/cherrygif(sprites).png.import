@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hhvyxqya32fg"
-path="res://.godot/imported/cherrygif(sprites).png-4ffba034ca707d70429b27e6aa60f3c9.ctex"
+path="res://.godot/imported/cherrygif(sprites).png-519554ef56a68a44a2aa7d8e389ba0c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/IconsKawaii/cherrygif(sprites).png"
-dest_files=["res://.godot/imported/cherrygif(sprites).png-4ffba034ca707d70429b27e6aa60f3c9.ctex"]
+source_file="res://Assets/IconsKawaii/sprites/cherrygif(sprites).png"
+dest_files=["res://.godot/imported/cherrygif(sprites).png-519554ef56a68a44a2aa7d8e389ba0c2.ctex"]
 
 [params]
 

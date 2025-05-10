@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5jew4syw3lyq"
-path="res://.godot/imported/ballonheart(sprites).png-687365d50e40ecefd7c3a91d2cf84a7a.ctex"
+uid="uid://urgps3jde48o"
+path="res://.godot/imported/estrelascadente.jpeg-dafe63e92b6b4764860e4ce5ffc8cc59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/IconsKawaii/sprites/ballonheart(sprites).png"
-dest_files=["res://.godot/imported/ballonheart(sprites).png-687365d50e40ecefd7c3a91d2cf84a7a.ctex"]
+source_file="res://Assets/IconsKawaii/estrelascadente.jpeg"
+dest_files=["res://.godot/imported/estrelascadente.jpeg-dafe63e92b6b4764860e4ce5ffc8cc59.ctex"]
 
 [params]
 

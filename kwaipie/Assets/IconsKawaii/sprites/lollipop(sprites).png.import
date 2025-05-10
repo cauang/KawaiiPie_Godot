@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6p3w071jf0wp"
-path="res://.godot/imported/lollipop(sprites).png-9d3adef39ecded64658a99b3bdf2c79d.ctex"
+path="res://.godot/imported/lollipop(sprites).png-d12a9c2f308bd737fa730419f19a404d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/IconsKawaii/lollipop(sprites).png"
-dest_files=["res://.godot/imported/lollipop(sprites).png-9d3adef39ecded64658a99b3bdf2c79d.ctex"]
+source_file="res://Assets/IconsKawaii/sprites/lollipop(sprites).png"
+dest_files=["res://.godot/imported/lollipop(sprites).png-d12a9c2f308bd737fa730419f19a404d.ctex"]
 
 [params]
 
