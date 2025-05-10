@@ -39,8 +39,11 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": ExtResource("6_jihi7")
+}, {
+"duration": 1.51,
+"texture": ExtResource("4_6e0ie")
 }],
 "loop": true,
 "name": &"perdeu",

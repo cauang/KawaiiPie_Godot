@@ -150,8 +150,8 @@ func end_game(winner):
 	
 	match winner:
 		0: winner_label.text = "Tempo esgotado!"
-		1: winner_label.text = "Jogador 1 venceu!"
-		2: winner_label.text = "Jogador 2 venceu!"
+		1: winner_label.text = "Player 1 venceu!"
+		2: winner_label.text = "Player 2 venceu!"
 	
 	winner_label.visible = true
 	
