@@ -9,15 +9,15 @@ metadata/_edit_vertical_guides_ = [652.0]
 metadata/_edit_horizontal_guides_ = [360.0]
 
 [node name="CountdownLabel" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
 anchors_preset = -1
 anchor_left = 0.508
 anchor_top = 0.498
 anchor_right = 0.51
 anchor_bottom = 0.5
-offset_left = -118.24
-offset_top = -38.56
-offset_right = 116.2
-offset_bottom = 37.0
+offset_left = -30.24
+offset_top = -75.56
+offset_right = 204.2
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(119, 39)
