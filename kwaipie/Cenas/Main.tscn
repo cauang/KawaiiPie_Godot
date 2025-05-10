@@ -32,7 +32,7 @@ position = Vector2(234, 516)
 position = Vector2(1070, 531)
 
 [node name="TimeLabel" type="Label" parent="."]
-offset_left = 624.0
-offset_top = 157.0
-offset_right = 664.0
-offset_bottom = 180.0
+offset_left = 617.0
+offset_top = 187.0
+offset_right = 657.0
+offset_bottom = 210.0
