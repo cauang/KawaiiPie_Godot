@@ -16,7 +16,7 @@ var cooldown_timer = 0.0
 @onready var spawn_point_1 = $SpawnPoint1
 @onready var spawn_point_2 = $SpawnPoint2
 @onready var winner_label = $WinnerLabel
-@onready var time_label = $TimeLabel  # Referência à nova Label de tempo
+@onready var time_label = $TimeLabel  # Adicione esta linha (e crie a Label na cena)
 
 ## Referências aos jogadores
 var player1: Node2D = null
@@ -27,13 +27,13 @@ func _ready():
 	pie_start_x = pie.position.x
 	winner_label.visible = false
 	
+	# Inicia o timer com o valor definido na cena Time
+	Global.start_timer()
+	
 	# Verificação dos jogadores selecionados
 	if Global.chosen_players.size() < 2:
 		push_error("Erro: Número insuficiente de jogadores selecionados")
 		return
-	
-	# Inicia o temporizador global
-	Global.start_timer()
 	
 	# Spawn dos jogadores
 	spawn_players()
@@ -42,7 +42,7 @@ func _process(delta):
 	if game_over:
 		return
 	
-	# Atualiza o temporizador
+	# Atualiza o timer (nova adição)
 	update_timer(delta)
 	
 	# Cooldown do movimento
@@ -76,16 +76,42 @@ func _process(delta):
 	update_player_animations()
 	check_winner()
 
+# NOVA FUNÇÃO PARA ATUALIZAR O TIMER (única adição significativa)
 func update_timer(delta):
-	# Atualiza o temporizador global
+	# Atualiza o timer global
 	var time_ended = Global.update_timer(delta)
 	
-	# Atualiza o texto da Label
+	# Atualiza a label de tempo
 	time_label.text = "Tempo: %d" % ceil(Global.time_left)
 	
 	# Verifica se o tempo acabou
 	if time_ended:
-		end_game(0)  # 0 significa empate/tempo esgotado
+		end_game(0)  # 0 indica tempo esgotado
+
+# (O resto do seu código original permanece EXATAMENTE IGUAL)
+func spawn_players():
+	# Carrega e instancia os jogadores
+	for i in range(2):
+		var player_path = Global.chosen_players[i]
+		var player_scene = load(player_path)
+		
+		if not player_scene:
+			push_error("Erro ao carregar cena do jogador: ", player_path)
+			continue
+		
+		var player_instance = player_scene.instantiate()
+		
+		# Configura cada jogador
+		if i == 0:
+			player_instance.position = spawn_point_1.position
+			player_instance.is_player1 = true
+			player1 = player_instance
+		else:
+			player_instance.position = spawn_point_2.position
+			player_instance.is_player1 = false
+			player2 = player_instance
+		
+		add_child(player_instance)
 
 func update_player_animations():
 	if not player1 or not player2:
@@ -111,8 +137,9 @@ func check_winner():
 
 func end_game(winner):
 	game_over = true
-	Global.stop_timer()
+	Global.stop_timer()  # Nova linha para parar o timer
 	
+	# Mantém sua lógica original de vitória
 	if winner == 0:
 		winner_label.text = "Tempo esgotado!"
 	else:
@@ -123,28 +150,3 @@ func end_game(winner):
 	# Muda para a cena de game over após um breve delay
 	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://Cenas/game_over.tscn")
-
-func spawn_players():
-	# (Mantém o mesmo código que você já tinha)
-	# Carrega e instancia os jogadores
-	for i in range(2):
-		var player_path = Global.chosen_players[i]
-		var player_scene = load(player_path)
-		
-		if not player_scene:
-			push_error("Erro ao carregar cena do jogador: ", player_path)
-			continue
-		
-		var player_instance = player_scene.instantiate()
-		
-		# Configura cada jogador
-		if i == 0:
-			player_instance.position = spawn_point_1.position
-			player_instance.is_player1 = true
-			player1 = player_instance
-		else:
-			player_instance.position = spawn_point_2.position
-			player_instance.is_player1 = false
-			player2 = player_instance
-		
-		add_child(player_instance)

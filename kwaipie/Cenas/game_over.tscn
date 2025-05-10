@@ -62,12 +62,11 @@ position = Vector2(234, 463)
 position = Vector2(634, 233)
 
 [node name="WinnerLabel" type="Label" parent="."]
-visible = false
 modulate = Color(1, 0, 1, 1)
-offset_left = 623.0
-offset_top = 87.0
-offset_right = 680.0
-offset_bottom = 110.0
+offset_left = 619.0
+offset_top = 62.0
+offset_right = 676.0
+offset_bottom = 85.0
 text = "Winner"
 horizontal_alignment = 1
 
