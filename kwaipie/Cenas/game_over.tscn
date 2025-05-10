@@ -52,14 +52,24 @@ text = "Sair"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+[node name="spawnPointPPlayer2" type="Node2D" parent="."]
+position = Vector2(1040, 463)
+
+[node name="spawnPointPlayer1" type="Node2D" parent="."]
+position = Vector2(234, 463)
+
 [node name="Pie" parent="." instance=ExtResource("5_v1lf6")]
-position = Vector2(661, 235)
+position = Vector2(634, 233)
 
-[node name="spawnPointPlayer1" type="Node2D" parent="Pie"]
-position = Vector2(-400, 230)
-
-[node name="spawnPointPPlayer2" type="Node2D" parent="Pie"]
-position = Vector2(406, 230)
+[node name="WinnerLabel" type="Label" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+offset_left = 623.0
+offset_top = 87.0
+offset_right = 680.0
+offset_bottom = 110.0
+text = "Winner"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="recomeçar" to="." method="_on_começar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
