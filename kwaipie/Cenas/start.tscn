@@ -442,9 +442,16 @@ theme_override_styles/normal = ExtResource("6_cd7qm")
 text = "Sair"
 
 [node name="balaocoração" type="AnimatedSprite2D" parent="."]
-position = Vector2(276, 59)
+position = Vector2(508, 303)
 rotation = -0.523598
 scale = Vector2(0.264474, 0.264474)
+sprite_frames = SubResource("SpriteFrames_flh47")
+autoplay = "default"
+
+[node name="balaocoração2" type="AnimatedSprite2D" parent="."]
+position = Vector2(579.285, 305.99)
+rotation = 0.261799
+scale = Vector2(0.113612, 0.113612)
 sprite_frames = SubResource("SpriteFrames_flh47")
 autoplay = "default"
 
@@ -470,6 +477,22 @@ frame_progress = 1.0
 [node name="pirulito2" type="AnimatedSprite2D" parent="."]
 position = Vector2(1066, 156)
 rotation = 2.09439
+scale = Vector2(0.110651, 0.110651)
+sprite_frames = SubResource("SpriteFrames_w6n88")
+autoplay = "default"
+
+[node name="pirulito3" type="AnimatedSprite2D" parent="."]
+position = Vector2(268.377, 84.2707)
+rotation = 0.261799
+scale = Vector2(0.264474, 0.264474)
+sprite_frames = SubResource("SpriteFrames_w6n88")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
+
+[node name="pirulito4" type="AnimatedSprite2D" parent="."]
+position = Vector2(248.377, 137.271)
+rotation = -0.261799
 scale = Vector2(0.110651, 0.110651)
 sprite_frames = SubResource("SpriteFrames_w6n88")
 autoplay = "default"
