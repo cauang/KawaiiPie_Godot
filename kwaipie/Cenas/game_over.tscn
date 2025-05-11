@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjhporm7df82g"]
+[gd_scene load_steps=5 format=3 uid="uid://bjhporm7df82g"]
 
 [ext_resource type="Script" uid="uid://droandr74mqoy" path="res://Cenas/game_over.gd" id="1_g1xor"]
 [ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="2_glpug"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="2_pmyos"]
+[ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="4_vpsjw"]
 
 [node name="gameOver" type="CanvasLayer"]
 script = ExtResource("1_g1xor")
@@ -39,6 +40,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_pmyos")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = ExtResource("4_vpsjw")
+theme_override_styles/disabled_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/disabled = ExtResource("4_vpsjw")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/hover_pressed = ExtResource("4_vpsjw")
+theme_override_styles/hover_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/hover = ExtResource("4_vpsjw")
+theme_override_styles/pressed_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/pressed = ExtResource("4_vpsjw")
+theme_override_styles/normal_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/normal = ExtResource("4_vpsjw")
 text = "Jogar de Novo"
 
 [node name="cancelar" type="Button" parent="."]
@@ -58,6 +70,17 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.686275, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_pmyos")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = ExtResource("4_vpsjw")
+theme_override_styles/disabled_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/disabled = ExtResource("4_vpsjw")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/hover_pressed = ExtResource("4_vpsjw")
+theme_override_styles/hover_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/hover = ExtResource("4_vpsjw")
+theme_override_styles/pressed_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/pressed = ExtResource("4_vpsjw")
+theme_override_styles/normal_mirrored = ExtResource("4_vpsjw")
+theme_override_styles/normal = ExtResource("4_vpsjw")
 text = "Sair"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

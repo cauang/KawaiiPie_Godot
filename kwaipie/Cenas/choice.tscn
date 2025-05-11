@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://5mq20cgloa0h"]
+[gd_scene load_steps=19 format=3 uid="uid://5mq20cgloa0h"]
 
 [ext_resource type="Script" uid="uid://c0dsvjika0xer" path="res://Cenas/choice.gd" id="1_rfoid"]
 [ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="2_rfoid"]
+[ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_ue8tn"]
 [ext_resource type="PackedScene" uid="uid://dl6wruw3gvs0o" path="res://Cenas/player_2.tscn" id="3_x0ugj"]
 [ext_resource type="PackedScene" uid="uid://byar7fftflpro" path="res://Cenas/player_3.tscn" id="4_mvjdu"]
 [ext_resource type="PackedScene" uid="uid://dn60fo8xd0svo" path="res://Cenas/player_4.tscn" id="5_p5gvq"]
@@ -11,6 +12,49 @@
 [ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="9_p5gvq"]
 [ext_resource type="Texture2D" uid="uid://885tjfm3srop" path="res://Assets/KAWAII PIE.png" id="9_x0ugj"]
 [ext_resource type="StyleBox" uid="uid://bj0s3gy2afdb8" path="res://Assets/Estilos de Botão/personagens.tres" id="10_ue8tn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
+atlas = ExtResource("2_ue8tn")
+region = Rect2(0, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe6mi"]
+atlas = ExtResource("2_ue8tn")
+region = Rect2(613, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx4nm"]
+atlas = ExtResource("2_ue8tn")
+region = Rect2(1226, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35ruu"]
+atlas = ExtResource("2_ue8tn")
+region = Rect2(1839, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucw8k"]
+atlas = ExtResource("2_ue8tn")
+region = Rect2(2452, 0, 613, 327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ggwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6n88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe6mi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx4nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35ruu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucw8k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="choice" type="Control"]
 layout_mode = 3
@@ -27,7 +71,22 @@ offset_left = 2.0
 offset_top = 1.0
 offset_right = 1282.0
 offset_bottom = 721.0
-color = Color(0.950569, 0.814311, 0.923254, 1)
+color = Color(0.992157, 0.933333, 0.956863, 1)
+
+[node name="fundo" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(80.5, 567.5)
+sprite_frames = SubResource("SpriteFrames_8ggwx")
+autoplay = "default"
+
+[node name="fundo2" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(693.5, 567.5)
+sprite_frames = SubResource("SpriteFrames_8ggwx")
+autoplay = "default"
+
+[node name="fundo3" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(1214.5, 568.5)
+sprite_frames = SubResource("SpriteFrames_8ggwx")
+autoplay = "default"
 
 [node name="Players" type="GridContainer" parent="."]
 layout_mode = 0

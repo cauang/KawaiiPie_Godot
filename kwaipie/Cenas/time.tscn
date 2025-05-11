@@ -1,7 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcqx171xnbkf"]
+[gd_scene load_steps=11 format=3 uid="uid://dcqx171xnbkf"]
 
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="1_4ks0r"]
 [ext_resource type="Script" uid="uid://cqi86qcuguib7" path="res://Cenas/time.gd" id="1_aaxx0"]
+[ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_osekw"]
+[ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="4_hwgyy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
+atlas = ExtResource("2_osekw")
+region = Rect2(0, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe6mi"]
+atlas = ExtResource("2_osekw")
+region = Rect2(613, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx4nm"]
+atlas = ExtResource("2_osekw")
+region = Rect2(1226, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35ruu"]
+atlas = ExtResource("2_osekw")
+region = Rect2(1839, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucw8k"]
+atlas = ExtResource("2_osekw")
+region = Rect2(2452, 0, 613, 327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fe35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6n88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe6mi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx4nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35ruu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucw8k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="time" type="Node"]
 script = ExtResource("1_aaxx0")
@@ -13,7 +58,22 @@ offset_left = 2.0
 offset_top = 1.0
 offset_right = 1282.0
 offset_bottom = 721.0
-color = Color(0.950569, 0.814311, 0.923254, 1)
+color = Color(0.992157, 0.933333, 0.956863, 1)
+
+[node name="fundo" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(80.5, 567.5)
+sprite_frames = SubResource("SpriteFrames_2fe35")
+autoplay = "default"
+
+[node name="fundo2" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(693.5, 567.5)
+sprite_frames = SubResource("SpriteFrames_2fe35")
+autoplay = "default"
+
+[node name="fundo3" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(1214.5, 568.5)
+sprite_frames = SubResource("SpriteFrames_2fe35")
+autoplay = "default"
 
 [node name="DEZ" type="Button" parent="."]
 anchors_preset = 8
@@ -27,8 +87,22 @@ offset_right = 175.0
 offset_bottom = -170.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.933333, 0.258824, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4ks0r")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = ExtResource("4_hwgyy")
+theme_override_styles/disabled_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/disabled = ExtResource("4_hwgyy")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/hover_pressed = ExtResource("4_hwgyy")
+theme_override_styles/hover_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/hover = ExtResource("4_hwgyy")
+theme_override_styles/pressed_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/pressed = ExtResource("4_hwgyy")
+theme_override_styles/normal_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/normal = ExtResource("4_hwgyy")
 text = "10 S
 "
 
@@ -44,8 +118,22 @@ offset_right = 174.0
 offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.933333, 0.258824, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4ks0r")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = ExtResource("4_hwgyy")
+theme_override_styles/disabled_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/disabled = ExtResource("4_hwgyy")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/hover_pressed = ExtResource("4_hwgyy")
+theme_override_styles/hover_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/hover = ExtResource("4_hwgyy")
+theme_override_styles/pressed_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/pressed = ExtResource("4_hwgyy")
+theme_override_styles/normal_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/normal = ExtResource("4_hwgyy")
 text = "20 S"
 
 [node name="TRINTA" type="Button" parent="."]
@@ -60,8 +148,22 @@ offset_right = 171.0
 offset_bottom = 231.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.933333, 0.258824, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4ks0r")
 theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = ExtResource("4_hwgyy")
+theme_override_styles/disabled_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/disabled = ExtResource("4_hwgyy")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/hover_pressed = ExtResource("4_hwgyy")
+theme_override_styles/hover_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/hover = ExtResource("4_hwgyy")
+theme_override_styles/pressed_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/pressed = ExtResource("4_hwgyy")
+theme_override_styles/normal_mirrored = ExtResource("4_hwgyy")
+theme_override_styles/normal = ExtResource("4_hwgyy")
 text = "30 S"
 
 [connection signal="pressed" from="DEZ" to="." method="_on_dez_pressed"]
