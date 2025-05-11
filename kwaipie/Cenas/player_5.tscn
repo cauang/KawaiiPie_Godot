@@ -15,6 +15,17 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_y1ul3"]
 animations = [{
 "frames": [{
+"duration": 2.0,
+"texture": ExtResource("6_khcep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c28hu")
+}],
+"loop": true,
+"name": &"ganhando",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_khcep")
 }],
@@ -85,7 +96,7 @@ offset_bottom = -63.0
 position = Vector2(2, -107)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_y1ul3")
-animation = &"perdeu"
+animation = &"ganhando"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]

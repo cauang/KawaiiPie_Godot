@@ -6,8 +6,7 @@ extends CharacterBody2D
 @export var player_scene_path: String = "res://Cenas/player_2.tscn"
 @export var is_player1: bool = true  # True para P1, False para P2
 
-# Distância de ativação da animação "perdeu" (ajuste conforme necessário)
-var danger_threshold: float = 0.7
+var current_anim: String = "idle"  # Guarda a animação atual
 
 func _ready():
 	if animated_player:
@@ -15,18 +14,22 @@ func _ready():
 	else:
 		printerr("AnimatedSprite2D não encontrado")
 
-func set_animation_intensity(intensity: float):
-	# Para P2, invertemos a intensidade
-	var actual_intensity = intensity if is_player1 else (1.0 - intensity)
-	
-	if actual_intensity > danger_threshold:
-		animated_player.play("perdeu")
-	else:
-		animated_player.play("idle")
-		
+# Controla a animação conforme o estado enviado
+func set_animation_state(state: String):
+	_play_if_not(state)
+
+# Controla a animação final de vitória ou derrota
 func set_game_over_state(is_winner: bool):
-	if has_node("AnimatedSprite2D"):
-		if is_winner:
-			$AnimatedSprite2D.play("ganhou")  # Animação de vitória
-		else:
-			$AnimatedSprite2D.play("pie")  # Animação de derrota
+	if not animated_player:
+		return
+
+	if is_winner:
+		animated_player.play("ganhou")
+	else:
+		animated_player.play("pie")
+
+# Toca a animação apenas se for diferente da atual
+func _play_if_not(anim_name: String):
+	if current_anim != anim_name:
+		animated_player.play(anim_name)
+		current_anim = anim_name

@@ -14,6 +14,17 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_kjvkc"]
 animations = [{
 "frames": [{
+"duration": 2.0,
+"texture": ExtResource("6_fyhsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cgaqb")
+}],
+"loop": true,
+"name": &"ganhando",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_fyhsh")
 }],
@@ -74,7 +85,7 @@ script = ExtResource("1_jifa4")
 position = Vector2(-5, -135)
 scale = Vector2(1.586, 1.586)
 sprite_frames = SubResource("SpriteFrames_kjvkc")
-animation = &"perdeu"
+animation = &"ganhando"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]
