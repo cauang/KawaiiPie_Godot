@@ -724,7 +724,8 @@ scale = Vector2(1.27508, 1.23424)
 sprite_frames = SubResource("SpriteFrames_daggq")
 animation = &"luva"
 autoplay = "luva"
-frame_progress = 0.407223
+frame = 5
+frame_progress = 0.298078
 
 [node name="torta2" type="AnimatedSprite2D" parent="Background"]
 visible = false
@@ -740,7 +741,8 @@ scale = Vector2(1.15027, 1.14233)
 sprite_frames = SubResource("SpriteFrames_n40m8")
 animation = &"personagem"
 autoplay = "personagem"
-frame_progress = 0.189844
+frame = 7
+frame_progress = 0.937204
 
 [node name="laços2" type="AnimatedSprite2D" parent="Background"]
 visible = false
@@ -834,7 +836,8 @@ scale = Vector2(0.458312, 0.292187)
 sprite_frames = SubResource("SpriteFrames_7slwi")
 animation = &"titulo"
 autoplay = "titulo"
-frame_progress = 0.902004
+frame = 13
+frame_progress = 0.71983
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -877,7 +880,7 @@ rotation = 1.57079
 scale = Vector2(0.122343, 0.147419)
 sprite_frames = SubResource("SpriteFrames_w6n88")
 autoplay = "default"
-frame_progress = 0.62716
+frame_progress = 0.0162748
 
 [node name="pirulito3" type="AnimatedSprite2D" parent="."]
 position = Vector2(150, 139)

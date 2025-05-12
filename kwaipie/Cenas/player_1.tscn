@@ -85,7 +85,7 @@ script = ExtResource("1_d8nxv")
 position = Vector2(-2, -131)
 scale = Vector2(1.58637, 1.58351)
 sprite_frames = SubResource("SpriteFrames_hdt88")
-animation = &"ganhando"
+animation = &"pie"
 autoplay = "idle"
 
 [node name="ClickArea" type="Area2D" parent="."]

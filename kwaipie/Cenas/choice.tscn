@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://5mq20cgloa0h"]
+[gd_scene load_steps=20 format=3 uid="uid://5mq20cgloa0h"]
 
 [ext_resource type="Script" uid="uid://c0dsvjika0xer" path="res://Cenas/choice.gd" id="1_rfoid"]
 [ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="2_rfoid"]
@@ -12,6 +12,7 @@
 [ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="9_p5gvq"]
 [ext_resource type="Texture2D" uid="uid://885tjfm3srop" path="res://Assets/KAWAII PIE.png" id="9_x0ugj"]
 [ext_resource type="StyleBox" uid="uid://bj0s3gy2afdb8" path="res://Assets/Estilos de Botão/personagens.tres" id="10_ue8tn"]
+[ext_resource type="Texture2D" uid="uid://hbw47lk27xek" path="res://Assets/Design/Moldura.png" id="13_8ggwx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
 atlas = ExtResource("2_ue8tn")
@@ -68,9 +69,9 @@ metadata/_edit_vertical_guides_ = [99.0, 1201.0, 198.0, 650.0, 1099.0]
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 1.0
+offset_top = 13.0
 offset_right = 1282.0
-offset_bottom = 721.0
+offset_bottom = 733.0
 color = Color(0.992157, 0.933333, 0.956863, 1)
 
 [node name="fundo" type="AnimatedSprite2D" parent="Background"]
@@ -106,15 +107,15 @@ position = Vector2(1097, 179)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player4" parent="Players" instance=ExtResource("5_p5gvq")]
-position = Vector2(193, 564)
+position = Vector2(193, 549)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player5" parent="Players" instance=ExtResource("6_ue8tn")]
-position = Vector2(651, 553)
+position = Vector2(649, 552)
 scale = Vector2(0.4, 0.4)
 
 [node name="Player6" parent="Players" instance=ExtResource("7_8ggwx")]
-position = Vector2(1100, 564)
+position = Vector2(1101, 546)
 scale = Vector2(0.4, 0.4)
 
 [node name="ConfirmButton" type="Button" parent="."]
@@ -309,34 +310,70 @@ text = "Julia"
 metadata/scene_path = "res://Cenas/player_6.tscn"
 
 [node name="KawaiiPie" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(197, 175)
 scale = Vector2(0.3035, 0.3035)
 texture = ExtResource("9_x0ugj")
 
 [node name="KawaiiPie6" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(194, 530)
 scale = Vector2(0.3035, 0.3035)
 texture = ExtResource("9_x0ugj")
 
 [node name="KawaiiPie3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(653, 539)
 scale = Vector2(0.3035, 0.3035)
 texture = ExtResource("9_x0ugj")
 
 [node name="KawaiiPie5" type="Sprite2D" parent="."]
-position = Vector2(646, 143)
+visible = false
+position = Vector2(513, -142)
 scale = Vector2(0.3035, 0.3035)
 texture = ExtResource("9_x0ugj")
 
 [node name="KawaiiPie7" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1098, 180)
 scale = Vector2(0.3035, 0.3035)
 texture = ExtResource("9_x0ugj")
 
 [node name="KawaiiPie4" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1097, 530)
 scale = Vector2(0.3035, 0.3035)
 texture = ExtResource("9_x0ugj")
+
+[node name="Moldura" type="Sprite2D" parent="."]
+position = Vector2(638, 116)
+scale = Vector2(0.601905, 0.659664)
+texture = ExtResource("13_8ggwx")
+
+[node name="Moldura2" type="Sprite2D" parent="."]
+position = Vector2(193.5, 139)
+scale = Vector2(0.645714, 0.668067)
+texture = ExtResource("13_8ggwx")
+
+[node name="Moldura3" type="Sprite2D" parent="."]
+position = Vector2(1094, 129.5)
+scale = Vector2(0.582857, 0.665966)
+texture = ExtResource("13_8ggwx")
+
+[node name="Moldura4" type="Sprite2D" parent="."]
+position = Vector2(1096.5, 490.5)
+scale = Vector2(0.561905, 0.703781)
+texture = ExtResource("13_8ggwx")
+
+[node name="Moldura5" type="Sprite2D" parent="."]
+position = Vector2(650, 515)
+scale = Vector2(0.594286, 0.659664)
+texture = ExtResource("13_8ggwx")
+
+[node name="Moldura6" type="Sprite2D" parent="."]
+position = Vector2(191, 500)
+scale = Vector2(0.605714, 0.672269)
+texture = ExtResource("13_8ggwx")
 
 [connection signal="pressed" from="ConfirmButton" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="bplayer1" to="." method="_on_player_1_pressed"]
