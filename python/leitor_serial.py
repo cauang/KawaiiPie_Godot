@@ -1,5 +1,5 @@
-import serial
-import keyboard
+import serial # pip install pyserial
+import keyboard # pip install keyboard
 
 
 ser = serial.Serial('COM3', 9600, timeout=1)  # Altere 'COM3' para a porta certa do PC (Porta USB)
