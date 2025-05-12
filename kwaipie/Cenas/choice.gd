@@ -63,10 +63,10 @@ func update_button_labels():
 
 # Quando o botão de confirmação for pressionado
 func on_confirm_pressed():
+	somClique.play()
 	if selected_players.size() == 2:
 		Global.chosen_players = selected_players.duplicate()  # Guarda os jogadores selecionados
 		print("Jogadores selecionados:", selected_players)
 		get_tree().change_scene_to_file("res://Cenas/time.tscn")  # Vai para a cena do jogo
-		somClique.play()
 	else:
 		print("Escolha exatamente 2 jogadores.")

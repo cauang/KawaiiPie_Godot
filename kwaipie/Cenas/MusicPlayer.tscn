@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkx0vgndix54f"]
+
+[ext_resource type="AudioStream" uid="uid://c6u5mqbwmewqc" path="res://Assets/sons/musiquinha xiquilique.mp3" id="1_keu2r"]
+
+[node name="MusicaFundo" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_keu2r")
+autoplay = true
+parameters/looping = true

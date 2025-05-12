@@ -28,7 +28,7 @@ func _ready():
 	pie_start_x = pie.position.x
 	winner_label.visible = false
 	time_label.visible = true
-	musica.play()
+	#chama musica aqui
 	
 
 	get_tree().paused = true
