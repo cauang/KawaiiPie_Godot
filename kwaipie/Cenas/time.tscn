@@ -298,12 +298,14 @@ scale = Vector2(0.176042, 0.176042)
 sprite_frames = SubResource("SpriteFrames_515ke")
 autoplay = "default"
 
-[node name="Label" type="Label" parent="Background"]
+[node name="TextoSelecione" type="Label" parent="Background"]
 layout_mode = 0
 offset_left = 296.0
 offset_top = 44.0
 offset_right = 1027.0
 offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.933333, 0.258824, 0.639216, 1)
+theme_override_colors/font_shadow_color = Color(0.694118, 0, 0.364706, 1)
 theme_override_fonts/font = ExtResource("1_4ks0r")
 theme_override_font_sizes/font_size = 81
 text = "Selecione o Desafio"
