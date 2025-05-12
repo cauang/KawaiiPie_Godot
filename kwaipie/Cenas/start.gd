@@ -12,8 +12,10 @@ func _process(delta):
 
 
 func _on_começar_pressed():
+	$clique.play()
 	get_tree().change_scene_to_file("res://Cenas/choice.tscn")
 				#MUDAR PARA CENA DE ESCOLHA
 
 func _on_cancelar_pressed():
+	$clique.play()
 	get_tree().quit()

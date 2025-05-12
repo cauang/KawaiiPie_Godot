@@ -26,5 +26,6 @@ theme_override_fonts/font = ExtResource("2_6h3cm")
 theme_override_font_sizes/font_size = 64
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("3_6h3cm")
 autoplay = true

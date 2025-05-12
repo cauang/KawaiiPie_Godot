@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://bdlloqy08xh1a"]
+[gd_scene load_steps=112 format=3 uid="uid://bdlloqy08xh1a"]
 
 [ext_resource type="Script" uid="uid://b833x6s6xckh3" path="res://Cenas/start.gd" id="1_e5x2v"]
 [ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_38xwh"]
@@ -45,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://m551cq20q4eh" path="res://Assets/Design/Boy1PERDEU.png" id="30_so08t"]
 [ext_resource type="Texture2D" uid="uid://dyhpgdlkavawb" path="res://Assets/Design/Boy1PIE.png" id="31_rpgar"]
 [ext_resource type="Texture2D" uid="uid://hhvyxqya32fg" path="res://Assets/IconsKawaii/sprites/cherrygif(sprites).png" id="44_vccws"]
+[ext_resource type="AudioStream" uid="uid://de2axwbrntkqw" path="res://Assets/sons/clique2.mp3" id="46_1kw6d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
 atlas = ExtResource("2_38xwh")
@@ -888,6 +889,9 @@ rotation = -0.261799
 scale = Vector2(0.136733, 0.137925)
 sprite_frames = SubResource("SpriteFrames_w6n88")
 autoplay = "default"
+
+[node name="clique" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("46_1kw6d")
 
 [connection signal="pressed" from="começar" to="." method="_on_começar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
