@@ -281,22 +281,32 @@ sprite_frames = SubResource("SpriteFrames_2fe35")
 autoplay = "default"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(450, 144)
+position = Vector2(456, 236)
 scale = Vector2(0.176042, 0.176042)
 sprite_frames = SubResource("SpriteFrames_515ke")
 autoplay = "default"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(447, 333)
+position = Vector2(454, 428)
 scale = Vector2(0.176042, 0.176042)
 sprite_frames = SubResource("SpriteFrames_515ke")
 autoplay = "default"
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Background"]
-position = Vector2(443, 541)
+position = Vector2(455, 637)
 scale = Vector2(0.176042, 0.176042)
 sprite_frames = SubResource("SpriteFrames_515ke")
 autoplay = "default"
+
+[node name="Label" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 44.0
+offset_right = 1027.0
+offset_bottom = 142.0
+theme_override_fonts/font = ExtResource("1_4ks0r")
+theme_override_font_sizes/font_size = 81
+text = "Selecione o Desafio"
 
 [node name="DEZ" type="Button" parent="."]
 anchors_preset = 8
@@ -304,10 +314,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -135.0
-offset_top = -268.0
-offset_right = 175.0
-offset_bottom = -170.0
+offset_left = -139.0
+offset_top = -165.0
+offset_right = 171.0
+offset_bottom = -67.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.933333, 0.258824, 0.639216, 1)
@@ -335,10 +345,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -136.0
-offset_top = -75.0
-offset_right = 174.0
-offset_bottom = 23.0
+offset_left = -138.0
+offset_top = 28.0
+offset_right = 172.0
+offset_bottom = 126.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.933333, 0.258824, 0.639216, 1)
@@ -365,10 +375,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -139.0
-offset_top = 133.0
-offset_right = 171.0
-offset_bottom = 231.0
+offset_left = -137.0
+offset_top = 238.0
+offset_right = 173.0
+offset_bottom = 336.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.933333, 0.258824, 0.639216, 1)
