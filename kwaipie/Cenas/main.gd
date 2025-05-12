@@ -1,12 +1,12 @@
 extends Node
 
-## Configurações do jogo
+## Configurações do jogo,
 var pie_movement = 15
 var pie_start_x = 0
 var pie_limit = 375
 var danger_threshold = 0.7
 
-## Estado do jogo
+## Estado do jogo,
 var game_over = false
 var cooldown_time = 0.02
 var cooldown_timer = 0.0

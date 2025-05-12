@@ -5,7 +5,7 @@ var chosen_players := []
 var tempo = 0          # Tempo selecionado na cena Time
 var time_left = 0      # Tempo restante atual
 var timer_running = false
-var last_winner = 0    # 0 = tempo esgotado/empate, 1 = player1, 2 = player2
+var last_winner = 0    # 0 = tempo esgotado/empate, 1 = player1, 2 = player2,
 
 # Funções do timer
 func start_timer():
