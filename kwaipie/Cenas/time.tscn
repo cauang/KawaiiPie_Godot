@@ -401,6 +401,8 @@ theme_override_styles/normal_mirrored = ExtResource("4_hwgyy")
 theme_override_styles/normal = ExtResource("4_hwgyy")
 text = "30 S"
 
+[node name="clique" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="DEZ" to="." method="_on_dez_pressed"]
 [connection signal="pressed" from="VINTE" to="." method="_on_vinte_pressed"]
 [connection signal="pressed" from="TRINTA" to="." method="_on_trinta_pressed"]

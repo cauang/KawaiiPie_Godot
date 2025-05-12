@@ -4,6 +4,7 @@ var selected_players := []  # Caminhos das cenas dos jogadores selecionados
 var selected_buttons := []  # Referência aos botões selecionados
 
 @onready var confirm_button = $ConfirmButton
+@onready var somClique = $clique
 
 func _ready():
 	# Ativa animação 'ganhou' nos players visíveis
@@ -26,6 +27,7 @@ func _on_button_pressed(button):
 	var player_name = button.name  # Ex: bplayer1
 	var player_number = player_name.substr(7, player_name.length() - 7)  #to extraindo o numero do jogador aqui
 	var player_path = "res://Cenas/player_" + player_number + ".tscn"  # cauan coloca o caminho certo
+	somClique.play()
 
 	if selected_players.has(player_path):
 		# verificando se esta marcado para poder desmarcar
@@ -65,5 +67,6 @@ func on_confirm_pressed():
 		Global.chosen_players = selected_players.duplicate()  # Guarda os jogadores selecionados
 		print("Jogadores selecionados:", selected_players)
 		get_tree().change_scene_to_file("res://Cenas/time.tscn")  # Vai para a cena do jogo
+		somClique.play()
 	else:
 		print("Escolha exatamente 2 jogadores.")

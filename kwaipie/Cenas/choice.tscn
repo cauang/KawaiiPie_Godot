@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://5mq20cgloa0h"]
+[gd_scene load_steps=21 format=3 uid="uid://5mq20cgloa0h"]
 
 [ext_resource type="Script" uid="uid://c0dsvjika0xer" path="res://Cenas/choice.gd" id="1_rfoid"]
 [ext_resource type="PackedScene" uid="uid://l3jw576pac6i" path="res://Cenas/player_1.tscn" id="2_rfoid"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://885tjfm3srop" path="res://Assets/KAWAII PIE.png" id="9_x0ugj"]
 [ext_resource type="StyleBox" uid="uid://bj0s3gy2afdb8" path="res://Assets/Estilos de Botão/personagens.tres" id="10_ue8tn"]
 [ext_resource type="Texture2D" uid="uid://hbw47lk27xek" path="res://Assets/Design/Moldura.png" id="13_8ggwx"]
+[ext_resource type="AudioStream" uid="uid://de2axwbrntkqw" path="res://Assets/sons/clique2.mp3" id="14_atf5r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
 atlas = ExtResource("2_ue8tn")
@@ -374,6 +375,9 @@ texture = ExtResource("13_8ggwx")
 position = Vector2(191, 500)
 scale = Vector2(0.605714, 0.672269)
 texture = ExtResource("13_8ggwx")
+
+[node name="clique" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_atf5r")
 
 [connection signal="pressed" from="ConfirmButton" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="bplayer1" to="." method="_on_player_1_pressed"]
