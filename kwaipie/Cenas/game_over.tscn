@@ -1,9 +1,53 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjhporm7df82g"]
+[gd_scene load_steps=12 format=3 uid="uid://bjhporm7df82g"]
 
 [ext_resource type="Script" uid="uid://droandr74mqoy" path="res://Cenas/game_over.gd" id="1_g1xor"]
 [ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="2_glpug"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="2_pmyos"]
+[ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="3_m7y8o"]
 [ext_resource type="StyleBox" uid="uid://co0ea1l78hprv" path="res://Assets/Estilos de Botão/rosinha e branco.tres" id="4_vpsjw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
+atlas = ExtResource("3_m7y8o")
+region = Rect2(0, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe6mi"]
+atlas = ExtResource("3_m7y8o")
+region = Rect2(613, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx4nm"]
+atlas = ExtResource("3_m7y8o")
+region = Rect2(1226, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35ruu"]
+atlas = ExtResource("3_m7y8o")
+region = Rect2(1839, 0, 613, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucw8k"]
+atlas = ExtResource("3_m7y8o")
+region = Rect2(2452, 0, 613, 327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o6hi5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6n88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe6mi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx4nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35ruu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucw8k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="gameOver" type="CanvasLayer"]
 script = ExtResource("1_g1xor")
@@ -16,9 +60,25 @@ offset_top = 1.0
 offset_right = 1282.0
 offset_bottom = 721.0
 size_flags_vertical = 4
+color = Color(0.992157, 0.933333, 0.956863, 1)
 
 [node name="Pie" parent="Background" instance=ExtResource("2_glpug")]
 position = Vector2(640, 234)
+
+[node name="fundo" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(80.5, 567.5)
+sprite_frames = SubResource("SpriteFrames_o6hi5")
+autoplay = "default"
+
+[node name="fundo2" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(693.5, 567.5)
+sprite_frames = SubResource("SpriteFrames_o6hi5")
+autoplay = "default"
+
+[node name="fundo3" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(1214.5, 568.5)
+sprite_frames = SubResource("SpriteFrames_o6hi5")
+autoplay = "default"
 
 [node name="spawnPointPlayer1" type="Node2D" parent="."]
 position = Vector2(234, 516)
