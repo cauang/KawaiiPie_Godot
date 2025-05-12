@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8ooaqe4oqfio"]
 
-[ext_resource type="Script" path="res://Cenas/countdown.gd" id="1_aefov"]
+[ext_resource type="Script" uid="uid://cxiyev38c0d1b" path="res://Cenas/countdown.gd" id="1_aefov"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="2_6h3cm"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
