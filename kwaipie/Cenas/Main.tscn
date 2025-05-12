@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://devfdee6wy2b2"]
+[gd_scene load_steps=13 format=3 uid="uid://devfdee6wy2b2"]
 
 [ext_resource type="Script" uid="uid://6gklcollpp3x" path="res://Cenas/main.gd" id="1_n6gaj"]
 [ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_n6gaj"]
 [ext_resource type="FontFile" uid="uid://dm3ch1vmt4ixr" path="res://Assets/Fonts/font.ttf" id="3_k74ne"]
 [ext_resource type="PackedScene" uid="uid://3i8yd5lmfnor" path="res://Cenas/pie.tscn" id="4_n6gaj"]
+[ext_resource type="AudioStream" uid="uid://c6u5mqbwmewqc" path="res://Assets/sons/musiquinha xiquilique.mp3" id="5_gxdmd"]
+[ext_resource type="AudioStream" uid="uid://dm2n0spjoim2w" path="res://Assets/sons/som perdeu.mp3" id="6_uwx1x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
 atlas = ExtResource("2_n6gaj")
@@ -101,3 +103,10 @@ offset_right = 744.0
 offset_bottom = 214.0
 theme_override_fonts/font = ExtResource("3_k74ne")
 theme_override_font_sizes/font_size = 51
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_gxdmd")
+volume_db = -5.0
+
+[node name="perdeu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uwx1x")

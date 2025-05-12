@@ -17,6 +17,8 @@ var cooldown_timer = 0.0
 @onready var spawn_point_2 = $SpawnPoint2
 @onready var winner_label = $WinnerLabel
 @onready var time_label = $TimeLabel
+@onready var musica = $musica
+@onready var somPerdeu =$perdeu 
 
 ## Referências aos jogadores
 var player1: Node2D = null
@@ -26,6 +28,8 @@ func _ready():
 	pie_start_x = pie.position.x
 	winner_label.visible = false
 	time_label.visible = true
+	musica.play()
+	
 
 	get_tree().paused = true
 
@@ -136,6 +140,8 @@ func end_game(winner):
 	game_over = true
 	Global.stop_timer()
 	Global.last_winner = winner
+	musica.stop()
+	somPerdeu.play()
 
 	match winner:
 		0: winner_label.text = "Tempo esgotado!"

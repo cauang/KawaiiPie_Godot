@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6u5mqbwmewqc"
+path="res://.godot/imported/musiquinha xiquilique.mp3-938741ffef82457501280a966cdc3f77.mp3str"
+
+[deps]
+
+source_file="res://Assets/sons/musiquinha xiquilique.mp3"
+dest_files=["res://.godot/imported/musiquinha xiquilique.mp3-938741ffef82457501280a966cdc3f77.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3a50sw75hqd3"
-path="res://.godot/imported/Fumaca3.png-3db7190b740851450573ba307ff852f5.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/Design/Fumaca3.png"
-dest_files=["res://.godot/imported/Fumaca3.png-3db7190b740851450573ba307ff852f5.ctex"]
 
 [params]
 
