@@ -918,7 +918,7 @@ position = Vector2(655, 646)
 scale = Vector2(0.148, 0.148)
 sprite_frames = SubResource("SpriteFrames_tgfns")
 autoplay = "default"
-frame_progress = 0.040963
+frame_progress = 0.44689
 
 [connection signal="pressed" from="começar" to="." method="_on_começar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
