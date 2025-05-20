@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=3 uid="uid://bdlloqy08xh1a"]
+[gd_scene load_steps=116 format=3 uid="uid://bdlloqy08xh1a"]
 
 [ext_resource type="Script" uid="uid://b833x6s6xckh3" path="res://Cenas/start.gd" id="1_e5x2v"]
 [ext_resource type="Texture2D" uid="uid://wk6jlpxnbg7l" path="res://Assets/IconsKawaii/sprites/fundo2(sprite).png" id="2_38xwh"]
@@ -46,6 +46,9 @@
 [ext_resource type="Texture2D" uid="uid://dyhpgdlkavawb" path="res://Assets/Design/Boy1PIE.png" id="31_rpgar"]
 [ext_resource type="Texture2D" uid="uid://hhvyxqya32fg" path="res://Assets/IconsKawaii/sprites/cherrygif(sprites).png" id="44_vccws"]
 [ext_resource type="AudioStream" uid="uid://de2axwbrntkqw" path="res://Assets/sons/clique2.mp3" id="46_1kw6d"]
+[ext_resource type="Texture2D" uid="uid://dw88bm7ki0hlj" path="res://Assets/Fonts/1.png" id="47_muk3n"]
+[ext_resource type="Texture2D" uid="uid://yy5ulj7oggxi" path="res://Assets/Fonts/2.png" id="48_qaj01"]
+[ext_resource type="Texture2D" uid="uid://ctfr4dxp2kylk" path="res://Assets/Fonts/3.png" id="49_ehmwv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6n88"]
 atlas = ExtResource("2_38xwh")
@@ -693,6 +696,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgfns"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("47_muk3n")
+}, {
+"duration": 5.0,
+"texture": ExtResource("48_qaj01")
+}, {
+"duration": 5.0,
+"texture": ExtResource("49_ehmwv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Start" type="CanvasLayer"]
 script = ExtResource("1_e5x2v")
 
@@ -892,6 +912,13 @@ autoplay = "default"
 
 [node name="clique" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("46_1kw6d")
+
+[node name="Créditos" type="AnimatedSprite2D" parent="."]
+position = Vector2(655, 646)
+scale = Vector2(0.148, 0.148)
+sprite_frames = SubResource("SpriteFrames_tgfns")
+autoplay = "default"
+frame_progress = 0.040963
 
 [connection signal="pressed" from="começar" to="." method="_on_começar_pressed"]
 [connection signal="pressed" from="cancelar" to="." method="_on_cancelar_pressed"]
